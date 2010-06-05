@@ -1,7 +1,10 @@
+PUC-SP - ESPECIALIZAÇÃO EM ENGENHARIA DE SOFTWARE
+
+Disciplina de Gerência de Requisitos - Professor Aluízio Saiter
 
 Membros do Grupo:
 
 Adriano de Almeida Silva	RA00062420
 Bruno Francisco Corrêa		RA00067297
 Daniel Tanihara Pereira		RA00061539
-Willian
+William Pereira Spinola		RA00061463
