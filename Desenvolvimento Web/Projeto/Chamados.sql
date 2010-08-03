@@ -10,6 +10,7 @@ INSERT INTO AreaResponsavel (NOME) VALUES ('Suporte Banco de Dados');
 INSERT INTO AreaResponsavel (NOME) VALUES ('Suporte Redes');
 INSERT INTO AreaResponsavel (NOME) VALUES ('Suporte Segurança');
 INSERT INTO AreaResponsavel (NOME) VALUES ('Suporte Nível 2');
+INSERT INTO AreaResponsavel (NOME) VALUES ('Suporte');
 
 
 create table StatusAtendimento
@@ -91,6 +92,19 @@ Senha varchar(10),
 Email varchar(50),
 primary key(ID_Usuario)
 ) 
+
+INSERT INTO Usuario (Nome, ID_AreaResponsavel, ID_Local, ID_NivelAcesso, Ramal, Senha, Email)
+values ('Daniel', 6, 5, 1, '2000', '123', 'daniel.tanihara@gmail.com');
+
+INSERT INTO Usuario (Nome, ID_AreaResponsavel, ID_Local, ID_NivelAcesso, Ramal, Senha, Email)
+values ('admin', 6, 5, 1, '2000', '123456', 'daniel.tanihara@gmail.com');
+
+INSERT INTO Usuario (Nome, ID_Local, ID_NivelAcesso, Ramal, Senha, Email)
+values ('Joao', 1, 2, '2000', '123456', 'daniel.tanihara@gmail.com');
+
+INSERT INTO Usuario (Nome, ID_Local, ID_NivelAcesso, Ramal, Senha, Email)
+values ('Maria', 2, 2, '2000', '123456', 'daniel.tanihara@gmail.com');
+
 
 create table Chamado
 (
