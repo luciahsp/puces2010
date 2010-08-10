@@ -17,16 +17,22 @@
 
             <div id="FormLogin">
 
-                <p style="width:100%; float:left; margin:2px; margin-top:20px; text-align:center; padding-left:30px;">
-                    <div class="LoginLabel">Usuário: </div>
-                    <input type="text" name="usuario" value="" />
-                </p>
+                <form action="">
+                    <p style="width:100%; float:left; margin:2px; margin-top:40px; text-align:center; padding-left:30px;">
+                        <div class="LoginLabel">Usuário: </div>
+                        <input type="text" name="usuario" value="" class="LoginEdit" >
+                    </p>
 
-                <p style="width:100%; float:left; margin:2px; margin-top:10px; text-align:center; padding-left:30px;">
-                    <div class="SenhaLabel">Senha: </div>
-                    <input type="text" name="senha"  value="" />
-                </p>
+                    <p style="width:100%; float:left; margin:2px; text-align:center; padding-left:30px;">
+                        <div class="LoginLabel">Senha: </div>
+                        <input type="password" name="senha"  value="" class="LoginEdit" >
+                    </p>
 
+                    <p style="width:100%; float:left; margin-top:20px; text-align:left; padding-left:60px;">
+                        <input type="submit" value="Entrar" class="Botao">
+                        <input type="reset" value="Limpar" class="Botao">
+                    </p>
+                </form>
 
             </div>
 
