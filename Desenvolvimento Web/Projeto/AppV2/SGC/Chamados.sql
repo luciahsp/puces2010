@@ -3,7 +3,7 @@ create table AreaResponsavel
 ID_AreaResponsavel integer NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1),
 Nome varchar(50),
 primary key(ID_AreaResponsavel)
-) 
+) ;
 
 INSERT INTO AreaResponsavel (NOME) VALUES ('HelpDesk');
 INSERT INTO AreaResponsavel (NOME) VALUES ('Suporte Banco de Dados');
@@ -19,7 +19,7 @@ ID_StatusAtendimento integer NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1
 Nome varchar(50),
 FecharAtendimento Smallint,
 primary key(ID_StatusAtendimento)
-) 
+) ;
 
 INSERT INTO StatusAtendimento (Nome, FecharAtendimento) VALUES ('Aguardando atendimento',0);
 INSERT INTO StatusAtendimento (Nome, FecharAtendimento) VALUES ('Em atendimento',0);
@@ -38,7 +38,7 @@ create table Local
 ID_Local integer NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1),
 Nome varchar(50),
 primary key(ID_Local)
-) 
+) ;
 
 INSERT INTO Local (Nome) VALUES ('Marketing');
 INSERT INTO Local (Nome) VALUES ('Comercial');
@@ -56,7 +56,7 @@ create table Unidade
 ID_Unidade integer NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1),
 Nome varchar(50),
 primary key(ID_Unidade)
-) 
+); 
 
 create table NivelAcesso
 (
@@ -64,7 +64,7 @@ ID_NivelAcesso integer NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1, INCR
 Nome varchar(50),
 PermiteEditar Smallint,
 primary key(ID_NivelAcesso)
-) 
+) ;
 
 INSERT INTO NivelAcesso (Nome, PermiteEditar) VALUES ('Administrador', 1);
 INSERT INTO NivelAcesso (Nome, PermiteEditar) VALUES ('Operador', 0);
@@ -77,7 +77,7 @@ Descricao varchar(50),
 ID_AreaResponsavel integer CONSTRAINT FK_IDAreaResponsavelProblema References AreaResponsavel on Delete Cascade on Update Restrict,
 SLA integer,
 primary key(ID_Problema)
-) 
+); 
 
 
 create table Usuario
@@ -91,7 +91,7 @@ Ramal varchar(10),
 Senha varchar(10),
 Email varchar(50),
 primary key(ID_Usuario)
-) 
+); 
 
 INSERT INTO Usuario (Nome, ID_AreaResponsavel, ID_Local, ID_NivelAcesso, Ramal, Senha, Email)
 values ('Daniel', 6, 5, 1, '2000', '123', 'daniel.tanihara@gmail.com');
@@ -121,7 +121,7 @@ HoraAbertura Time,
 DataFechamento Date,
 HoraFechamento Time,
 primary key(ID_Chamado)
-) 
+) ;
 
 
 create table ChamadoAcao
@@ -135,5 +135,5 @@ Descricao varchar(1000),
 Data Date,
 Hora Time,
 primary key(ID_ChamadoAcao)
-) 
+) ;
 
