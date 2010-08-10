@@ -1,0 +1,53 @@
+.Main
+{
+    background-color:#edf2f6;
+    background-image:none;
+    margin:0px;
+    padding:0px;
+}
+
+#mainLogin {
+	text-align: left;
+	margin: auto;
+	width: 809px;
+	background-image:url(../_imagens/background_login.gif);
+	height:625px;
+	overflow:auto;
+	position:relative;
+}
+#FormLogin
+{
+    width:275px;
+    height:175px;
+    margin-top:285px;
+    margin-left:300px;
+}
+.LoginLabel {
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 12px;
+    COLOR: #626262;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    float:left;
+    width:60px;
+    padding:3px;
+}
+.SenhaLabel {
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 12px;
+    COLOR: #626262;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    float:left;
+    padding:3px;
+}
+.LoginLink {
+    color: #555754;
+    font-weight: bold;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10px;
+}
+a.LoginLink:hover {
+    color: #458f36;
+    font-weight: bold;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10px;
+}
