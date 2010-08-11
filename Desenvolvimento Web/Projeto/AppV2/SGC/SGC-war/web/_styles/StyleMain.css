@@ -247,7 +247,18 @@ a.textoAZ_12B:hover {
     font-size: 11px;
     font-family: Arial, Helvetica, sans-serif;
 }
-
+.textoPR_12B {
+    color: black;
+    font-weight: bold;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.textoBR_12B {
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
 .textoLR_11B {
     color: #e86019;
     font-weight: bold;
