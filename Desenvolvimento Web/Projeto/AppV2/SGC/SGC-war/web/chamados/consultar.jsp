@@ -68,27 +68,27 @@
                             <tr class="textoCZA_12B" height="20px" id="tdCodigo" runat="server">
                                 <td width="10px" ></td>
                                 <td width="80px">Código:</td>
-                                <td><asp:Label ID="lblCodigo" runat="server" Text="" CssClass="textoAZ_12B"></asp:Label></td>
+                                <td><input type="text" id="" name="" value="" class="imputBR"  /></td>
                             </tr>
                             <tr class="textoCZA_12B" height="20px">
                                 <td width="10px" ></td>
                                 <td width="80px">Login:</td>
-                                <td><asp:TextBox ID="txtLogin" runat="server" CssClass="Edit" Width="200px"></asp:TextBox></td>
+                                <td><input type="text" id="" name="" value="" class="imputBR"  /></td>
                             </tr>
                             <tr class="textoCZA_12B" height="20px">
                                 <td width="10px" ></td>
                                 <td>Nome:</td>
-                                <td><asp:TextBox ID="txtNome" runat="server" CssClass="Edit" Width="200px"></asp:TextBox></td>
+                                <td><input type="text" id="" name="" value="" class="imputBR"  /></td>
                             </tr>
                             <tr class="textoCZA_12B" height="20px">
                                 <td width="10px" ></td>
                                 <td>E-mail:</td>
-                                <td><asp:TextBox ID="txtEmail" runat="server" CssClass="Edit" Width="200px"></asp:TextBox></td>
+                                <td><input type="text" id="" name="" value="" class="imputBR"  /></td>
                             </tr>
                             <tr class="textoCZA_12B" height="20px">
                                 <td width="10px" ></td>
                                 <td>Status:</td>
-                                <td><asp:DropDownList ID="ddlStatus" runat="server" CssClass="Edit" Width="200px"></asp:DropDownList></td>
+                                <td><input type="text" id="" name="" value="" class="imputBR"  /></td>
                             </tr>
                         </table>
 
@@ -143,7 +143,6 @@
 
                                     Quantidade de itens encontrados: 2
 
-
                                 </td>
                             </tr>
                             <tr class="textoCZA_12B" height="20px" id="tdCodigo" runat="server">
@@ -157,6 +156,7 @@
                                                     <td width="100px">&nbsp;Nome</td>
                                                     <td width="100px">&nbsp;Nome</td>
                                                     <td width="100px">&nbsp;Status</td>
+                                                    <td width="100px">&nbsp;Editar</td>
                                                     <td width="100px">&nbsp;Visualizar</td>
                                                 </tr>
 
@@ -165,6 +165,7 @@
                                                     <td>&nbsp;Bruno</td>
                                                     <td>&nbsp;Bruno</td>
                                                     <td>&nbsp;Aberto</td>
+                                                    <td width="100px">&nbsp;<a href="novochamado.jsp" class="textoLnkMenu_12B">Editar</a></td>
                                                     <td width="100px">&nbsp;<a href="detalheschamado.jsp" class="textoLnkMenu_12B">Detalhes</a></td>
                                                 </tr>
                                                 <tr class="textoCZA_12" bgcolor="#ffffff">
@@ -172,6 +173,7 @@
                                                     <td>&nbsp;Bruno</td>
                                                     <td>&nbsp;Bruno</td>
                                                     <td>&nbsp;Fechado</td>
+                                                    <td width="100px">&nbsp;<a href="novochamado.jsp" class="textoLnkMenu_12B">Editar</a></td>
                                                     <td width="100px">&nbsp;<a href="detalheschamado.jsp" class="textoLnkMenu_12B">Detalhes</a></td>
                                                 </tr>
                                             </table>
@@ -183,8 +185,6 @@
                                 <td colspan="2">&nbsp;</td>
                             </tr>
                     </table>
-
-                    
 
                 </td>
             </tr>
