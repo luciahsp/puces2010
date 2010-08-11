@@ -30,8 +30,8 @@
                     <table border="0" cellpadding="0" cellspacing="0" width="100%">
                         <tr>
                             <td width="5"></td>
-                            <td  class="textoLR_15B">Abrir Chamado</td>
-                            <td align="right"><a href="#" class="textoLnkMenu_12B">Voltar</a></td>
+                            <td  class="textoLR_15B">Administração de Chamados</td>
+                            <td align="right"><a href="../home.jsp" class="textoLnkMenu_12B">Voltar</a></td>
                             <td width="20">&nbsp;</td>
                         </tr>
                     </table>
@@ -39,6 +39,78 @@
                 </td>
             </tr>
 
+        </table>
+
+        <br>
+        <table width="95%" align="center" border=1 cellpadding="0" cellspacing="0" bordercolor="#ffffff" bgcolor="#ededed">
+            <tr>
+                <td height="25" class="textoAZ_12B" valign="middle">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td width="5"></td>
+                            <td width="100%">
+                                <div class="textoAZ_12B">Dados do Chamado</div>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+
+                    <form action="" method="post" onsubmit="">
+
+                        <table border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td colspan="3">&nbsp;</td>
+                            </tr>
+                            <tr class="textoCZA_12B" height="20px" id="tdCodigo" runat="server">
+                                <td width="10px" ></td>
+                                <td width="80px">Código:</td>
+                                <td><asp:Label ID="lblCodigo" runat="server" Text="" CssClass="textoAZ_12B"></asp:Label></td>
+                            </tr>
+                            <tr class="textoCZA_12B" height="20px">
+                                <td width="10px" ></td>
+                                <td width="80px">Login:</td>
+                                <td><asp:TextBox ID="txtLogin" runat="server" CssClass="Edit" Width="200px"></asp:TextBox></td>
+                            </tr>
+                            <tr class="textoCZA_12B" height="20px">
+                                <td width="10px" ></td>
+                                <td>Nome:</td>
+                                <td><asp:TextBox ID="txtNome" runat="server" CssClass="Edit" Width="200px"></asp:TextBox></td>
+                            </tr>
+                            <tr class="textoCZA_12B" height="20px">
+                                <td width="10px" ></td>
+                                <td>E-mail:</td>
+                                <td><asp:TextBox ID="txtEmail" runat="server" CssClass="Edit" Width="200px"></asp:TextBox></td>
+                            </tr>
+                            <tr class="textoCZA_12B" height="20px">
+                                <td width="10px" ></td>
+                                <td>Status:</td>
+                                <td><asp:DropDownList ID="ddlStatus" runat="server" CssClass="Edit" Width="200px"></asp:DropDownList></td>
+                            </tr>
+                        </table>
+
+                        <hr width="99%" size="0" class="Branco">
+
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tr class="textoCZA_11B">
+                                <td align="right">
+                                    <input type="reset" value="Limpar" name="limpar" class="Botao" />&nbsp;&nbsp;
+                                    <input type="submit" value="Salvar" name="Salvar" class="Botao" />
+                                </td>
+                                <td width="40">&nbsp;</td>
+                            </tr>
+                            <tr height="10px">
+                                <td></td>
+                                <td width="40"></td>
+                            </tr>
+                        </table>
+
+                    </form>
+
+                </td>
+            </tr>
         </table>
 
     </body>
