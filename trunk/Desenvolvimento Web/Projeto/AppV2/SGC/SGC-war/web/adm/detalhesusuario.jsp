@@ -1,3 +1,4 @@
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
    "http://www.w3.org/TR/html4/loose.dtd">
@@ -10,11 +11,12 @@
         <link href="../_styles/StyleMain.css" rel="stylesheet" type="text/css" /><title>JSP Page</title>
     </head>
     <body>
+
         <table id="tblTitulo" runat="server" cellspacing="0" cellpadding="0" border="0" style="TABLE-LAYOUT:fixed" align="center">
             <tr>
                 <td height="31" width="38"><img src="../_imagens/Barra01_01.gif" border="0" runat="server" id="img1"></td>
                 <td height="31" width="100%" background="../_imagens/Barra01_02.gif">
-                    <span class="tituloBarra">Ocorrências</span>
+                    <span class="tituloBarra">Administração</span>
                 </td>
                 <td height="31" width="5" background="../_imagens/Barra01_02.gif"><img src="../_imagens/Barra01_02.gif" border="0" runat="server" id="img2"></td>
             </tr>
@@ -29,8 +31,8 @@
                     <table border="0" cellpadding="0" cellspacing="0" width="100%">
                         <tr>
                             <td width="5"></td>
-                            <td  class="textoLR_15B">Detalhes de Chamados</td>
-                            <td align="right"><a href="chamados.jsp" class="textoLnkMenu_12B">Voltar</a></td>
+                            <td  class="textoLR_15B">Detalhes de Usuário</td>
+                            <td align="right"><a href="consultarusuarios.jsp" class="textoLnkMenu_12B">Voltar</a></td>
                             <td width="20">&nbsp;</td>
                         </tr>
                     </table>
@@ -48,7 +50,7 @@
                         <tr>
                             <td width="5"></td>
                             <td width="100%">
-                                <div class="textoAZ_12B">Dados do Chamado</div>
+                                <div class="textoAZ_12B">Dados do Usuário</div>
                             </td>
                         </tr>
                     </table>

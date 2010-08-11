@@ -1,4 +1,3 @@
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
    "http://www.w3.org/TR/html4/loose.dtd">
@@ -31,7 +30,7 @@
                     <table border="0" cellpadding="0" cellspacing="0" width="100%">
                         <tr>
                             <td width="5"></td>
-                            <td  class="textoLR_15B">Administração de Usuários</td>
+                            <td  class="textoLR_15B">Consultar Usuários</td>
                             <td align="right"><a href="../home.jsp" class="textoLnkMenu_12B">Voltar</a></td>
                             <td width="20">&nbsp;</td>
                         </tr>
@@ -42,6 +41,7 @@
 
         </table>
 
+        <!-- INICIO - Critérios de Pesquisa -->
         <br>
         <table width="95%" align="center" border=1 cellpadding="0" cellspacing="0" bordercolor="#ffffff" bgcolor="#ededed">
             <tr>
@@ -50,7 +50,7 @@
                         <tr>
                             <td width="5"></td>
                             <td width="100%">
-                                <div class="textoAZ_12B">Dados do Usuário</div>
+                                <div class="textoAZ_12B">Critérios para Pesquisa</div>
                             </td>
                         </tr>
                     </table>
@@ -98,7 +98,7 @@
                             <tr class="textoCZA_11B">
                                 <td align="right">
                                     <input type="reset" value="Limpar" name="limpar" class="Botao" />&nbsp;&nbsp;
-                                    <input type="submit" value="Salvar" name="Salvar" class="Botao" />
+                                    <input type="submit" value="Consultar" name="Consultar" class="Botao" />
                                 </td>
                                 <td width="40">&nbsp;</td>
                             </tr>
@@ -113,6 +113,83 @@
                 </td>
             </tr>
         </table>
+        <!-- FIM - Critérios de Pesquisa -->
+
+        <!-- INICIO - Resultado Pesquisa -->
+        <br>
+        <table width="95%" align="center" border=1 cellpadding="0" cellspacing="0" bordercolor="#ffffff" bgcolor="#ededed">
+            <tr>
+                <td height="25" class="textoAZ_12B" valign="middle">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td width="5"></td>
+                            <td width="100%">
+                                <div class="textoAZ_12B">Resultado da Pesquisa</div>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+
+                    <table border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td colspan="2">&nbsp;</td>
+                            </tr>
+                            <tr class="textoCZA_12B" height="20px" id="tdCodigo" runat="server">
+                                <td width="10px" ></td>
+                                <td>
+
+                                    Quantidade de itens encontrados: 2
+
+                                </td>
+                            </tr>
+                            <tr class="textoCZA_12B" height="20px" id="tdCodigo" runat="server">
+                                <td width="10px" ></td>
+                                <td>
+
+                                    <!-- Tabela de Resultado -->
+                                    	    <table width="95%" border="1" align="center" cellpadding="0" cellspacing="0"  >
+                                                <tr class="textoBR_12B" bgcolor="#6fa5d4">
+                                                    <td width="100px" height="20px">&nbsp;Nome</td>
+                                                    <td width="100px">&nbsp;Nome</td>
+                                                    <td width="100px">&nbsp;Nome</td>
+                                                    <td width="100px">&nbsp;Status</td>
+                                                    <td width="100px">&nbsp;Editar</td>
+                                                    <td width="100px">&nbsp;Visualizar</td>
+                                                </tr>
+
+                                                <tr class="textoCZA_12" bgcolor="#ffffff">
+                                                    <td>&nbsp;Bruno</td>
+                                                    <td>&nbsp;Bruno</td>
+                                                    <td>&nbsp;Bruno</td>
+                                                    <td>&nbsp;Aberto</td>
+                                                    <td width="100px">&nbsp;<a href="usuarios.jsp" class="textoLnkMenu_12B">Editar</a></td>
+                                                    <td width="100px">&nbsp;<a href="detalhesusuario.jsp" class="textoLnkMenu_12B">Detalhes</a></td>
+                                                </tr>
+                                                <tr class="textoCZA_12" bgcolor="#ffffff">
+                                                    <td>&nbsp;Bruno</td>
+                                                    <td>&nbsp;Bruno</td>
+                                                    <td>&nbsp;Bruno</td>
+                                                    <td>&nbsp;Fechado</td>
+                                                    <td width="100px">&nbsp;<a href="usuarios.jsp" class="textoLnkMenu_12B">Editar</a></td>
+                                                    <td width="100px">&nbsp;<a href="detalhesusuario.jsp" class="textoLnkMenu_12B">Detalhes</a></td>
+                                                </tr>
+                                            </table>
+
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">&nbsp;</td>
+                            </tr>
+                    </table>
+
+                </td>
+            </tr>
+        </table>
+        <!-- FIM - Resultado Pesquisa -->
 
     </body>
 </html>
