@@ -59,7 +59,7 @@
                         </tr>
                         <tr>
                             <td align="left"><img src="_imagens/Seta2.jpg"></td>
-                            <td align="left">&nbsp;&nbsp;<a href="chamados/consultar.jsp" target="fraBody" class="textoLnkMenu_12B">Consultar</a></td>
+                            <td align="left">&nbsp;&nbsp;<a href="chamados/consultar.jsp" target="fraBody" class="textoLnkMenu_12B">Consultar Chamados</a></td>
                         </tr>
                     </table>
                     <br>
@@ -72,11 +72,11 @@
                     <table width="100%" border="0" cellspacing="0" cellpadding="0">
                         <tr>
                             <td width="12" align="left" height="15px"><img src="_imagens/Seta2.jpg"></td>
-                            <td width="491" align="left" height="15px">&nbsp;&nbsp;<a href="adm/usuarios.jsp" target="fraBody" class="textoLnkMenu_12B">Usuários</a></td>
+                            <td width="491" align="left" height="15px">&nbsp;&nbsp;<a href="adm/usuarios.jsp" target="fraBody" class="textoLnkMenu_12B">Cadastrar Usuário</a></td>
                         </tr>
                         <tr>
                             <td align="left"><img src="_imagens/Seta2.jpg"></td>
-                            <td align="left">&nbsp;&nbsp;<a href="adm/mural.jsp" target="fraBody" class="textoLnkMenu_12B">Mural</a></td>
+                            <td align="left">&nbsp;&nbsp;<a href="adm/mural.jsp" target="fraBody" class="textoLnkMenu_12B">Consultar Usuários</a></td>
                         </tr>
                     </table>
                     <br>
@@ -89,12 +89,14 @@
                     <table width="100%" border="0" cellspacing="0" cellpadding="0">
                         <tr>
                             <td width="12" align="left" height="15px"><img src="_imagens/Seta2.jpg"></td>
-                            <td width="491" align="left" height="15px">&nbsp;&nbsp;<a href="historico/autenticacao.jsp" target="fraBody" class="textoLnkMenu_12B">Autenticações</a></td>
+                            <td width="491" align="left" height="15px">&nbsp;&nbsp;<a href="historico/autenticacao.jsp" target="fraBody" class="textoLnkMenu_12B">Consultar Autenticações</a></td>
                         </tr>
+                        <!--
                         <tr>
                             <td align="left"><img src="_imagens/Seta2.jpg"></td>
-                            <td align="left">&nbsp;&nbsp;<a href="historico/atividades.jsp" target="fraBody" class="textoLnkMenu_12B">Atividades</a></td>
+                            <td align="left">&nbsp;&nbsp;<a href="historico/atividades.jsp" target="fraBody" class="textoLnkMenu_12B">Consultar Atividades Realizadas</a></td>
                         </tr>
+                        -->
                     </table>
                     <br>
 
