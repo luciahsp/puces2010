@@ -1,0 +1,310 @@
+
+
+.oculto
+{
+	display:none;
+}
+
+.modalPopup {
+    background-color:#ffffff;
+    border-width:3px;
+    border-style:solid;
+    border-color:Gray;
+    padding:3px;
+    width:250px;
+}
+
+.modalBackground {
+    background-color:Gray;
+    filter:alpha(opacity=70);
+    opacity:0.7;
+}
+
+.pnlAreaReport {
+    width:450px;
+    height:450px;
+    border:1px outset;
+    margin:20px;
+    float:left;
+    padding:0px;
+}
+.branco {
+	color:White;
+}
+
+div.MessageStyle {
+	background-color: #FFC080;
+	top: 95%;
+	left: 1%;
+	height: 20px;
+	width: 600px;
+	position: absolute;
+}
+
+/* Botão-Label */
+.Edit {
+	background-color: #FFFFFF;
+	border: 1px solid #1d5284;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #333333;
+	text-decoration: none;
+	margin: 2px;
+}
+.EditFocus {
+	background-color: #FFFFFF;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #333333;
+	text-decoration: none;
+	margin: 2px;
+
+	border-top:1px solid blue;
+	border-left:1px solid blue;
+	border-bottom:1px solid blue;
+	border-right:1px solid blue;
+
+}
+
+.EditErr {
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	text-decoration: none;
+	margin: 2px;
+
+	border-top:1px solid red;
+	border-left:1px solid red;
+	border-bottom:1px solid red;
+	border-right:1px solid red;
+	color:Red;
+	background-color:lemonchiffon;
+}
+.imputBR {
+	background-color: #FFFFFF;
+	border: 1px solid #1d5284;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #333333;
+	text-decoration: none;
+	margin: 2px;
+}
+.Botao {
+	border:1px solid gray;
+	background-color:#D6D7E0;
+	color:#005363;
+	font-weight:bolder;
+	font-size:10px;
+	font-family:Verdana;
+}
+
+/* Menu */
+.menuItem {
+	font-size: 9px;
+	color: #0099FF;
+	font-family: Verdana;
+	padding:0px;
+}
+
+.menuGrupo {
+	margin-bottom:0px;
+	padding-top:15px;
+	font-size: 11px;
+	font-family: Verdana;
+	color: #006699;
+	font-weight: bold;
+	margin-left:0px;
+}
+
+.menuTopo {
+	background-image:url(../_images/Barra_menu01.jpg);
+	height:26px;
+	font-family:Verdana, sans-serif;
+	font-size:11px;
+	color:#FFFFFF;
+	text-align:center;
+	vertical-align:bottom;
+}
+
+/* Link */
+.textoLnkMenu_12B {
+    color: #006699;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+a.textoLnkMenu_12B:hover {
+    color: #e86019;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+/* Texto */
+.textoOk
+{
+    color: Green;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+}
+.textoErr
+{
+    color: Red;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+}
+
+.textoAZ_10B {
+    color: #31759a;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+}
+a.textoAZ_10B:hover {
+    color: #e86019;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+}
+.textoAZ_11B {
+	font-size: 11px;
+	color: #6c84b0;
+	font-weight: bold;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+.textoAZ_11B {
+	font-size: 11px;
+	color: #1d5284;
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+    /*font-family: Arial, Helvetica, sans-serif;*/
+}
+.textoAZ_12B {
+	font-size: 12px;
+	color: #1d5284;
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+}
+a.textoAZ_12B:hover {
+	font-size: 12px;
+	color: #1d5284;
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.textoAZ_13B {
+	font-size: 13px;
+	color: #1d5284;
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.textoAZ_14B {
+	font-size: 14px;
+	color: #1d5284;
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.textoBR_10 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #FFFFFF;
+}
+
+.textoCZA_10 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #6c6c6c;
+}
+.textoCZA_10B {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #6c6c6c;
+	font-weight: bold;
+}
+.textoCZA_11B {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #6c6c6c;
+	font-weight: bold;
+}
+.textoCZA_12B {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #6c6c6c;
+	font-weight: bold;
+}
+
+.textoPR_11B {
+    color: black;
+    font-weight: bold;
+    font-size: 11px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.textoLR_11B {
+    color: #e86019;
+    font-weight: bold;
+    font-size: 11px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.textoLR_15B {
+    color: #e86019;
+    font-weight: bold;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Table */
+.FundoAZ_bordaCZA {
+	BORDER-RIGHT: #cccaca 1px solid;
+	BORDER-TOP: #cccaca 1px solid;
+	BORDER-LEFT: #cccaca 1px solid;
+	BORDER-BOTTOM: #cccaca 1px solid;
+	BACKGROUND-COLOR: #ededed;
+}
+
+/* Controles Ajax */
+.MaskedEditFocus
+{
+    background-color: #ffffcc;
+    color: #000000;
+}
+.MaskedEditError
+{
+    background-color: #ffcccc;
+}
+
+/* Controle Menu AJAX - Accordion*/
+.accordionHeader
+{
+    border: 1px solid #2F4F4F;
+    color: white;
+    background-color: #4581bd;
+      font-family: Arial, Sans-Serif;
+      font-size: 12px;
+      font-weight: bold;
+    padding: 5px;
+    margin-top: 5px;
+}
+.accordionHeaderSelected
+{
+    border: 1px solid #2F4F4F;
+    color: white;
+    background-color: #6fa5d4;
+      font-family: Arial, Sans-Serif;
+      font-size: 12px;
+      font-weight: bold;
+    padding: 5px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+.accordionContent
+{
+    background-color: #D3DEEF;
+
+    border-top: none;
+    padding: 10px;
+    padding-top: 5px;
+}
