@@ -31,7 +31,7 @@
                         <tr>
                             <td width="5"></td>
                             <td  class="textoLR_15B">Chamados Abertos</td>
-                            <td align="right"><a href="#" class="textoLnkMenu_12B">Voltar</a></td>
+                            <td align="right"><a href="../home.jsp" class="textoLnkMenu_12B">Voltar</a></td>
                             <td width="20">&nbsp;</td>
                         </tr>
                     </table>
