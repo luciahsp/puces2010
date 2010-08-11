@@ -80,9 +80,9 @@
 
             <tr>
                 <td height="28" colspan="3" valign="top" background="_imagens/Cab_04.gif">
-	            <table width="500" border="0" align="right" cellpadding="0" cellspacing="0">
+	            <table width="100%" border="0" align="right" cellpadding="0" cellspacing="0">
                         <tr>
-                            <td width="427" height="20" align="right" valign="middle">&nbsp;</td>
+                            <td height="20" align="left" valign="middle" class="textoCZA_12B">&nbsp;&nbsp;Usuário: asdasd</td>
                             <td width="10" valign="top"><img src="_imagens/BarraCZA_01.jpg" width="3" height="23"></td>
                             <td width="63" valign="middle">
                                 <a href="javascript:showHideMenu();"><img src="_imagens/SetaLR-02.jpg" width="10" height="10" border="0" id="imgLink" alt="Recolher / Expandir Cabeçalho"></a>
