@@ -67,27 +67,27 @@
                             <tr class="textoCZA_12B" height="20px" id="tdCodigo" runat="server">
                                 <td width="10px" ></td>
                                 <td width="80px">Código:</td>
-                                <td><asp:Label ID="lblCodigo" runat="server" Text="" CssClass="textoAZ_12B"></asp:Label></td>
+                                <td><input type="text" id="" name="" value="" class="imputBR"  /></td>
                             </tr>
                             <tr class="textoCZA_12B" height="20px">
                                 <td width="10px" ></td>
                                 <td width="80px">Login:</td>
-                                <td><asp:TextBox ID="txtLogin" runat="server" CssClass="Edit" Width="200px"></asp:TextBox></td>
+                                <td><input type="text" id="" name="" value="" class="imputBR"  /></td>
                             </tr>
                             <tr class="textoCZA_12B" height="20px">
                                 <td width="10px" ></td>
                                 <td>Nome:</td>
-                                <td><asp:TextBox ID="txtNome" runat="server" CssClass="Edit" Width="200px"></asp:TextBox></td>
+                                <td><input type="text" id="" name="" value="" class="imputBR"  /></td>
                             </tr>
                             <tr class="textoCZA_12B" height="20px">
                                 <td width="10px" ></td>
                                 <td>E-mail:</td>
-                                <td><asp:TextBox ID="txtEmail" runat="server" CssClass="Edit" Width="200px"></asp:TextBox></td>
+                                <td><input type="text" id="" name="" value="" class="imputBR"  /></td>
                             </tr>
                             <tr class="textoCZA_12B" height="20px">
                                 <td width="10px" ></td>
                                 <td>Status:</td>
-                                <td><asp:DropDownList ID="ddlStatus" runat="server" CssClass="Edit" Width="200px"></asp:DropDownList></td>
+                                <td><input type="text" id="" name="" value="" class="imputBR"  /></td>
                             </tr>
                         </table>
 
