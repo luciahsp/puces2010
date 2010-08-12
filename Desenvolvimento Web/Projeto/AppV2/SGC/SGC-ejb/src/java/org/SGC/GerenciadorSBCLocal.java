@@ -34,7 +34,7 @@ public interface GerenciadorSBCLocal {
 
     //Local
     public List<LocalDepartamento> listarLocais();
-    public Local recuperaLocal(int id);
+    public LocalDepartamento recuperaLocal(int id);
     public void insereLocal(Local local);
 
     //Problemas
@@ -54,7 +54,7 @@ public interface GerenciadorSBCLocal {
 
     //Area Responsável
     public List<Arearesponsavel> listarAreasResponsaveis();
-    public Unidade recuperaAreaResponsavel(int id);
+    public Arearesponsavel recuperaAreaResponsavel(int id);
     public void insereAreaResponsavel(Arearesponsavel area);
 
 }
