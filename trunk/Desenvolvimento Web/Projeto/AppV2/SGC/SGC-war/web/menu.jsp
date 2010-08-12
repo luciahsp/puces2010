@@ -72,7 +72,7 @@
                     <table width="100%" border="0" cellspacing="0" cellpadding="0">
                         <tr>
                             <td width="12" align="left" height="15px"><img src="_imagens/Seta2.jpg"></td>
-                            <td width="491" align="left" height="15px">&nbsp;&nbsp;<a href="adm/usuarios.jsp" target="fraBody" class="textoLnkMenu_12B">Cadastrar Usuário</a></td>
+                            <td width="491" align="left" height="15px">&nbsp;&nbsp;<a href="usuarioServlet" target="fraBody" class="textoLnkMenu_12B">Cadastrar Usuário</a></td>
                         </tr>
                         <tr>
                             <td align="left"><img src="_imagens/Seta2.jpg"></td>
