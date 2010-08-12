@@ -76,7 +76,7 @@
                         </tr>
                         <tr>
                             <td align="left"><img src="_imagens/Seta2.jpg"></td>
-                            <td align="left">&nbsp;&nbsp;<a href="adm/consultarusuarios.jsp" target="fraBody" class="textoLnkMenu_12B">Consultar Usuários</a></td>
+                            <td align="left">&nbsp;&nbsp;<a href="ListarUsuarios" target="fraBody" class="textoLnkMenu_12B">Consultar Usuários</a></td>
                         </tr>
                     </table>
                     <br>
