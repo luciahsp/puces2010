@@ -82,7 +82,9 @@
                                 <td>Problema:</td>
                                 <td>
                                     <select style="width: 250px" id="Select1" class="imputBR">
-                                        <option>Teste Teste</option>
+                                        <c:forEach var="listaProblemas" items="${listaProblemas}">
+                                            <option id="${listaProblemas.idProblema}">${listaProblemas.descricao}</option>
+                                        </c:forEach>
                                     </select>
                                 </td>
                             </tr>
@@ -93,22 +95,16 @@
                             </tr>
                             <tr class="textoCZA_12B" height="25px">
                                 <td></td>
-                                <td>Unidade:</td>
-                                <td>
-                                    <select style="width: 250px" id="Select1" class="imputBR">
-                                        <option>Teste Teste</option>
-                                    </select>
-                                </td>
-                            </tr>
-                            <tr class="textoCZA_12B" height="25px">
-                                <td></td>
                                 <td>Local:</td>
                                 <td>
                                     <select style="width: 250px" id="Select1" class="imputBR">
-                                        <option>Teste Teste</option>
+                                        <c:forEach var="listaLocais" items="${listaLocais}">
+                                            <option id="${listaLocais.idLocal}">${listaLocais.nome}</option>
+                                        </c:forEach>
                                     </select>
                                 </td>
                             </tr>
+                            <c:if test="${id!=0}">
                             <tr class="textoCZA_12B" height="25px">
                                 <td></td>
                                 <td>Data de Abertura:</td>
@@ -119,15 +115,25 @@
                                 <td>Data de Fechamento:</td>
                                 <td><input type="text" id="" name="" value="" class="imputBR"  /></td>
                             </tr>
+                            </c:if>
                             <tr class="textoCZA_12B" height="25px">
                                 <td></td>
                                 <td>Operador:</td>
-                                <td><input type="text" id="" name="" value="" class="imputBR"  /></td>
+                                <td>
+                                    <c:if test="${sessionScope.login != null}">
+                                        ${sessionScope.login.nome}
+                                    </c:if>
+                                </td>
                             </tr>
                             <tr class="textoCZA_12B" height="25px">
                                 <td></td>
                                 <td>Status:</td>
-                                <td><input type="text" id="" name="" value="" class="imputBR"  /></td>
+                                <c:if test="${id==0}">
+                                    <td>Aguardando atendimento</td>
+                                </c:if>
+                                <c:if test="${id!=0}">
+                                    <td><input type="text" id="" name="" value="" class="imputBR"  /></td>
+                                </c:if>
                             </tr>
 
                         </table>
