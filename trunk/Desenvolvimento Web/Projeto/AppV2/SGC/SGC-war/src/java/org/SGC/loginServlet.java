@@ -22,7 +22,8 @@ public class loginServlet extends HttpServlet {
 
         try {
             usuario = gerenciadorSBC.recuperaUsuario(loginUsuario);
-        } catch (Exception e) {
+        }
+        catch (Exception e) {
             request.setAttribute("erro", "Login ou senha inválidos !");
             request.getRequestDispatcher("login.jsp").forward(request, response);
         }
