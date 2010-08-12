@@ -60,7 +60,7 @@
             <tr>
                 <td>
 
-                    <form action="" method="post" onsubmit="">
+                    <form action="atualizaUsuario" method="post" onsubmit="">
 
                         <table border="0" cellpadding="0" cellspacing="0">
                             <tr>
@@ -69,33 +69,28 @@
                             <tr class="textoCZA_12B" height="20px" id="tdCodigo" runat="server">
                                 <td width="10px" ></td>
                                 <td width="80px">Código:</td>
-                                <td><input type="text" id="codigo" name="codigo" value="" class="imputBR" readonly /></td>
-                            </tr>
-                            <tr class="textoCZA_12B" height="20px">
-                                <td width="10px" ></td>
-                                <td width="80px">Login:</td>
-                                <td><input type="text" id="login" name="login" value="" class="imputBR" maxlength="10"  /></td>
+                                <td><input type="text" id="codigo" name="codigo" value="${usuarioEsc.idUsuario}" class="imputBR" readonly /></td>
                             </tr>
                             <tr class="textoCZA_12B" height="20px">
                                 <td width="10px" ></td>
                                 <td>Nome:</td>
-                                <td><input type="text" id="nome" name="nome" value="" class="imputBR" size="50" maxlength="50" /></td>
+                                <td><input type="text" id="nome" name="nome" value="${usuarioEsc.nome}" class="imputBR" size="50" maxlength="50" /></td>
                             </tr>
                             <tr class="textoCZA_12B" height="20px">
                                 <td width="10px" ></td>
                                 <td>E-mail:</td>
-                                <td><input type="text" id="email" name="email" value="" class="imputBR" size="50" maxlength="100" /></td>
+                                <td><input type="text" id="email" name="email" value="${usuarioEsc.email}" class="imputBR" size="50" maxlength="100" /></td>
                             </tr>
                             <tr class="textoCZA_12B" height="20px">
                                 <td width="10px" ></td>
                                 <td>Ramal:</td>
-                                <td><input type="text" id="ramal" name="ramal" value="" class="imputBR" maxlength="5" /></td>
+                                <td><input type="text" id="ramal" name="ramal" value="${usuarioEsc.ramal}" class="imputBR" maxlength="5" /></td>
                             </tr>
 
                             <tr class="textoCZA_12B" height="20px">
                                 <td width="10px" ></td>
                                 <td>Senha:</td>
-                                <td><input type="password" id="senha" name="senha" value="" class="imputBR" maxlength="10"  /></td>
+                                <td><input type="password" id="senha" name="senha" value="${usuarioEsc.senha}" class="imputBR" maxlength="10"  /></td>
                             </tr>
 
                             <tr class="textoCZA_12B" height="20px">
@@ -104,7 +99,7 @@
                                 <td>
                                     <select name="area">
                                         <c:forEach var="lista" items="${listaArea}">
-                                            <option value="${lista.idArearesponsavel}">${lista.nome}</option>
+                                            <option <c:if test="${lista.idArearesponsavel==usuarioEsc.idArearesponsavel.idArearesponsavel}">selected</c:if> value="${lista.idArearesponsavel}">${lista.nome}</option>
                                         </c:forEach>
                                     </select>
                                 </td>
@@ -114,7 +109,9 @@
                                 <td width="10px" ></td>
                                 <td>Local:</td>
                                 <td><select name="local">
-                                        <option>Pao de Queijo</option>
+                                        <c:forEach var="lista" items="${listaLocal}">
+                                            <option <c:if test="${lista.idLocal==usuarioEsc.idLocal.idLocal}">selected</c:if> value="${lista.idLocal}">${lista.nome}</option>
+                                        </c:forEach>
                                     </select>
                                 </td>
                             </tr>
@@ -123,7 +120,9 @@
                                 <td width="10px" ></td>
                                 <td>Nível de Acesso:</td>
                                 <td><select name="acesso">
-                                        <option>Pao de Queijo</option>
+                                        <c:forEach var="lista" items="${listaNivel}">
+                                            <option <c:if test="${lista.idNivelacesso==usuarioEsc.idNivelacesso.idNivelacesso}">selected</c:if> value="${lista.idNivelacesso}">${lista.nome}</option>
+                                        </c:forEach>
                                     </select>
                                 </td>
                             </tr>
