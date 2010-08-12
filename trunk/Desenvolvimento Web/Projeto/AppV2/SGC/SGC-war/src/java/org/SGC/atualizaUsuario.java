@@ -14,10 +14,12 @@ public class atualizaUsuario extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
+       boolean alteracao = false;
        Usuario user = new Usuario();
 
        if(request.getParameter("codigo") == null ? "" != null : !request.getParameter("codigo").equals("")) {
-          user =  gerenciadorSBC.recuperaUsuario(request.getParameter("codigo"));
+          user =  gerenciadorSBC.recuperaUsuario(Integer.parseInt(request.getParameter("codigo")));
+          alteracao = true;
        }
        
        LocalDepartamento localDep = gerenciadorSBC.recuperaLocal(Integer.parseInt(request.getParameter("local")));
@@ -33,9 +35,15 @@ public class atualizaUsuario extends HttpServlet {
        user.setSenha(request.getParameter("senha"));
 
        try {
-           gerenciadorSBC.insereUsuario(user);
+           if(alteracao) {
+               gerenciadorSBC.atualizaUsuario(user);
+           } else {
+               gerenciadorSBC.insereUsuario(user);
+           }
        } catch (Exception e) {
-           response.sendRedirect("adm/consultarusuarios.jsp");
+           
        }
+       
+       response.sendRedirect("adm/consultarusuarios.jsp");
     }
 }
