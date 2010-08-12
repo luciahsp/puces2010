@@ -28,7 +28,7 @@ import javax.persistence.Table;
     @NamedQuery(name = "Local.findAll", query = "SELECT l FROM Local l"),
     @NamedQuery(name = "Local.findByIdLocal", query = "SELECT l FROM Local l WHERE l.idLocal = :idLocal"),
     @NamedQuery(name = "Local.findByNome", query = "SELECT l FROM Local l WHERE l.nome = :nome")})
-public class Local implements Serializable {
+public class LocalDepartamento implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -42,10 +42,10 @@ public class Local implements Serializable {
     @OneToMany(mappedBy = "idLocal")
     private List<Chamado> chamadoList;
 
-    public Local() {
+    public LocalDepartamento() {
     }
 
-    public Local(Integer idLocal) {
+    public LocalDepartamento(Integer idLocal) {
         this.idLocal = idLocal;
     }
 
@@ -91,10 +91,10 @@ public class Local implements Serializable {
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Local)) {
+        if (!(object instanceof LocalDepartamento)) {
             return false;
         }
-        Local other = (Local) object;
+        LocalDepartamento other = (LocalDepartamento) object;
         if ((this.idLocal == null && other.idLocal != null) || (this.idLocal != null && !this.idLocal.equals(other.idLocal))) {
             return false;
         }

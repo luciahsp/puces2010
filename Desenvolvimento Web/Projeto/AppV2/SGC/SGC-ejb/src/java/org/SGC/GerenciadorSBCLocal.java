@@ -33,7 +33,7 @@ public interface GerenciadorSBCLocal {
     public void insereNivelAcesso(Nivelacesso nivel);
 
     //Local
-    public List<Local> listarLocais();
+    public List<LocalDepartamento> listarLocais();
     public Local recuperaLocal(int id);
     public void insereLocal(Local local);
 
