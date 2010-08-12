@@ -8,17 +8,17 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title> .:: SGC - Sistema de Gerenciamento de Chamados ::. </title>
 
-        <link href="../_styles/StyleMain.css" rel="stylesheet" type="text/css" />
+        <link href="_styles/StyleMain.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
 
         <table id="tblTitulo" runat="server" cellspacing="0" cellpadding="0" border="0" style="TABLE-LAYOUT:fixed" align="center">
             <tr>
-                <td height="31" width="38"><img src="../_imagens/Barra01_01.gif" border="0" runat="server" id="img1"></td>
-                <td height="31" width="100%" background="../_imagens/Barra01_02.gif">
+                <td height="31" width="38"><img src="_imagens/Barra01_01.gif" border="0" runat="server" id="img1"></td>
+                <td height="31" width="100%" background="_imagens/Barra01_02.gif">
                     <span class="tituloBarra">Administração</span>
                 </td>
-                <td height="31" width="5" background="../_imagens/Barra01_02.gif"><img src="../_imagens/Barra01_02.gif" border="0" runat="server" id="img2"></td>
+                <td height="31" width="5" background="_imagens/Barra01_02.gif"><img src="../_imagens/Barra01_02.gif" border="0" runat="server" id="img2"></td>
             </tr>
         </table>
 
@@ -66,31 +66,12 @@
                             <tr>
                                 <td colspan="3">&nbsp;</td>
                             </tr>
-                            <tr class="textoCZA_12B" height="20px" id="tdCodigo" runat="server">
+                            <tr class="textoCZA_12B" height="20px" id="tdNome" runat="server">
                                 <td width="10px" ></td>
-                                <td width="80px">Código:</td>
+                                <td width="80px">Nome:</td>
                                 <td><input type="text" id="" name="" value="" class="imputBR"  /></td>
                             </tr>
-                            <tr class="textoCZA_12B" height="20px">
-                                <td width="10px" ></td>
-                                <td width="80px">Login:</td>
-                                <td><input type="text" id="" name="" value="" class="imputBR"  /></td>
-                            </tr>
-                            <tr class="textoCZA_12B" height="20px">
-                                <td width="10px" ></td>
-                                <td>Nome:</td>
-                                <td><input type="text" id="" name="" value="" class="imputBR"  /></td>
-                            </tr>
-                            <tr class="textoCZA_12B" height="20px">
-                                <td width="10px" ></td>
-                                <td>E-mail:</td>
-                                <td><input type="text" id="" name="" value="" class="imputBR"  /></td>
-                            </tr>
-                            <tr class="textoCZA_12B" height="20px">
-                                <td width="10px" ></td>
-                                <td>Status:</td>
-                                <td><input type="text" id="" name="" value="" class="imputBR"  /></td>
-                            </tr>
+                            
                         </table>
 
                         <hr width="99%" size="0" class="Branco">
@@ -154,7 +135,7 @@
                                                     <td width="100px" height="20px">&nbsp;Nome</td>
                                                     <td width="100px">&nbsp;Ramal</td>
                                                     <td width="100px">&nbsp;e-mail</td>
-                                                    <td width="100px">&nbsp;Status</td>
+                                                    <td width="30px">&nbsp;Tipo</td>
                                                     <td width="100px">&nbsp;Editar</td>
                                                 </tr>
 
@@ -163,7 +144,19 @@
                                                         <td>${usuario.nome}</td>
                                                         <td>${usuario.ramal}</td>
                                                         <td>${usuario.email}</td>
-                                                        <td>&nbsp;Aberto</td>
+
+                                                        <td>
+                                                        <c:if test="${usuario.idNivelacesso.idNivelacesso == 1}">
+                                                            <img alt =""src="_imagens/adm.gif" />
+
+                                                        </c:if>
+
+                                                        <c:if test="${usuario.idNivelacesso.idNivelacesso == 2}">
+                                                            <img alt =""src="_imagens/user.gif" />
+                                                        </c:if>
+
+
+                                                        </td>
                                                         <td width="100px">&nbsp;<a href="detalhesusuario.jsp" class="textoLnkMenu_12B">Detalhes</a></td>
                                                     </tr>
                                                 </c:forEach>
