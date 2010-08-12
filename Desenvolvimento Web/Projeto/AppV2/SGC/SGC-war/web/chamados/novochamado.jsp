@@ -64,31 +64,68 @@
                             <tr>
                                 <td colspan="3">&nbsp;</td>
                             </tr>
-                            <tr class="textoCZA_12B" height="20px" id="tdCodigo" runat="server">
+                            <tr class="textoCZA_12B" height="25px" id="tdCodigo" runat="server">
                                 <td width="10px" ></td>
-                                <td width="80px">Código:</td>
+                                <td width="150px">Área Responsável:</td>
+                                <td>
+                                    <select style="width: 250px" id="Select1" class="imputBR">
+                                        <option>Teste TEste</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr class="textoCZA_12B" height="25px">
+                                <td></td>
+                                <td>Problema:</td>
+                                <td>
+                                    <select style="width: 250px" id="Select1" class="imputBR">
+                                        <option>Teste Teste</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr class="textoCZA_12B" height="25px">
+                                <td></td>
+                                <td>Descrição:</td>
+                                <td><textarea id="TextArea1" cols="20" rows="2" style="width: 250px; height: 50px" class="imputBR"></textarea></td>
+                            </tr>
+                            <tr class="textoCZA_12B" height="25px">
+                                <td></td>
+                                <td>Unidade:</td>
+                                <td>
+                                    <select style="width: 250px" id="Select1" class="imputBR">
+                                        <option>Teste Teste</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr class="textoCZA_12B" height="25px">
+                                <td></td>
+                                <td>Local:</td>
+                                <td>
+                                    <select style="width: 250px" id="Select1" class="imputBR">
+                                        <option>Teste Teste</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr class="textoCZA_12B" height="25px">
+                                <td></td>
+                                <td>Data de Abertura:</td>
                                 <td><input type="text" id="" name="" value="" class="imputBR"  /></td>
                             </tr>
-                            <tr class="textoCZA_12B" height="20px">
-                                <td width="10px" ></td>
-                                <td width="80px">Login:</td>
+                            <tr class="textoCZA_12B" height="25px">
+                                <td></td>
+                                <td>Data de Fechamento:</td>
                                 <td><input type="text" id="" name="" value="" class="imputBR"  /></td>
                             </tr>
-                            <tr class="textoCZA_12B" height="20px">
-                                <td width="10px" ></td>
-                                <td>Nome:</td>
+                            <tr class="textoCZA_12B" height="25px">
+                                <td></td>
+                                <td>Operador:</td>
                                 <td><input type="text" id="" name="" value="" class="imputBR"  /></td>
                             </tr>
-                            <tr class="textoCZA_12B" height="20px">
-                                <td width="10px" ></td>
-                                <td>E-mail:</td>
-                                <td><input type="text" id="" name="" value="" class="imputBR"  /></td>
-                            </tr>
-                            <tr class="textoCZA_12B" height="20px">
-                                <td width="10px" ></td>
+                            <tr class="textoCZA_12B" height="25px">
+                                <td></td>
                                 <td>Status:</td>
                                 <td><input type="text" id="" name="" value="" class="imputBR"  /></td>
                             </tr>
+
                         </table>
 
                         <hr width="99%" size="0" class="Branco">
