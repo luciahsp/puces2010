@@ -45,7 +45,7 @@ public class GerenciadorSBC implements GerenciadorSBCLocal {
     }
 
     public void insereUsuario(Usuario user) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        em.persist(user);
     }
 
     public List<Arearesponsavel> listarAreasResponsaveis() {
@@ -62,12 +62,13 @@ public class GerenciadorSBC implements GerenciadorSBCLocal {
     }
 
     public List<LocalDepartamento> listarLocais() {
-         Query q = em.createQuery("SELECT l FROM Local l");
+         Query q = em.createQuery("SELECT l FROM LocalDepartamento l");
          return q.getResultList();
     }
 
     public List<Nivelacesso> listarNiveisDeAcesso() {
-        throw new UnsupportedOperationException("Not supported yet.");
+         Query q = em.createQuery("SELECT n FROM Nivelacesso n");
+         return q.getResultList();
     }
 
     public List<Problema> listarProblemas() {
@@ -84,11 +85,14 @@ public class GerenciadorSBC implements GerenciadorSBCLocal {
     }
 
     public List<Usuario> listarUsuarios() {
-        throw new UnsupportedOperationException("Not supported yet.");
+         Query q = em.createQuery("SELECT u FROM Usuario u");
+         return q.getResultList();
     }
 
-    public Unidade recuperaAreaResponsavel(int id) {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public Arearesponsavel recuperaAreaResponsavel(int id) {
+        Arearesponsavel a = new Arearesponsavel();
+        a = (Arearesponsavel) em.createNamedQuery("Arearesponsavel.findByIdArearesponsavel").setParameter("idArearesponsavel", id).getSingleResult();
+        return a;
     }
 
     public Chamado recuperaChamado(int id) {
@@ -107,12 +111,16 @@ public class GerenciadorSBC implements GerenciadorSBCLocal {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
-    public Local recuperaLocal(int id) {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public LocalDepartamento recuperaLocal(int id) {
+        LocalDepartamento l = new LocalDepartamento();
+        l = (LocalDepartamento) em.createNamedQuery("LocalDepartamento.findByIdLocal").setParameter("idLocal", id).getSingleResult();
+        return l;
     }
 
     public Nivelacesso recuperaNivelAcesso(int id) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        Nivelacesso n = new Nivelacesso();
+        n = (Nivelacesso) em.createNamedQuery("Nivelacesso.findByIdNivelacesso").setParameter("idNivelacesso", id).getSingleResult();
+        return n;
     }
 
     public Local recuperaProblema(int id) {
@@ -134,15 +142,8 @@ public class GerenciadorSBC implements GerenciadorSBCLocal {
     }
 
     public Usuario recuperaUsuario(int id) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        Usuario u = new Usuario();
+        u = (Usuario) em.createNamedQuery("Usuario.findByIdUsuario").setParameter("idUsuario", id).getSingleResult();
+        return u;
     }
-
-    public void persist(Object object) {
-        em.persist(object);
-    }
-
-    public void persist1(Object object) {
-        em.persist(object);
-    }
-
 }
