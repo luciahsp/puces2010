@@ -31,7 +31,7 @@ public class loginServlet extends HttpServlet {
         if(usuario.getSenha() == null ? senhaUsuario == null : usuario.getSenha().equals(senhaUsuario)) {
              //Se a senha for válida, continuar, caso contrário exibir mensagem
             request.getSession().setAttribute("login", usuario);
-            request.getRequestDispatcher("principal").forward(request, response);
+            request.getRequestDispatcher("main.jsp").forward(request, response);
         } else {
             request.setAttribute("erro", "Login ou senha inválidos !");
             request.getRequestDispatcher("login.jsp").forward(request, response);
