@@ -91,8 +91,8 @@
                             </tr>
                             <tr class="textoCZA_12B" height="20px" id="tdCodigo" runat="server">
                                 <td width="10px" ></td>
-                                <td width="80px">Código:</td>
-                                <td><input type="text" id="codigo" name="codigo" value="${usuarioEsc.idUsuario}" class="imputBR" readonly /></td>
+                                <td width="80px"></td>
+                                <td><input type="hidden" id="codigo" name="codigo" value="${usuarioEsc.idUsuario}" class="imputBR" readonly /></td>
                             </tr>
                             <tr class="textoCZA_12B" height="20px">
                                 <td width="10px" ></td>
