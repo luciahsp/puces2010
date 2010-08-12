@@ -10,6 +10,29 @@
         <title> .:: SGC - Sistema de Gerenciamento de Chamados ::. </title>
 
         <link href="_styles/StyleMain.css" rel="stylesheet" type="text/css" />
+
+
+        <script language="javascript">
+            function valida() {
+                if (document.getElementById("nome").value == "") {
+                    alert("Preencha o login do usuário !");
+                    return false;
+                }
+                if (document.getElementById("email").value == "") {
+                    alert("Preencha o e-mail !");
+                    return false;
+                }
+                if (document.getElementById("ramal").value == "") {
+                    alert("Preencha o ramal !");
+                    return false;
+                }
+                if (document.getElementById("senha").value == "") {
+                    alert("Preencha a senha !");
+                    return false;
+                }
+            }
+        </script>
+
     </head>
     <body>
 
@@ -60,7 +83,7 @@
             <tr>
                 <td>
 
-                    <form action="atualizaUsuario" method="post" onsubmit="">
+                    <form action="atualizaUsuario" method="post" onsubmit="return valida();">
 
                         <table border="0" cellpadding="0" cellspacing="0">
                             <tr>
