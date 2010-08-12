@@ -1,3 +1,4 @@
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
    "http://www.w3.org/TR/html4/loose.dtd">
@@ -140,9 +141,7 @@
                             <tr class="textoCZA_12B" height="20px" id="tdCodigo" runat="server">
                                 <td width="10px" ></td>
                                 <td>
-
-                                    Quantidade de itens encontrados: 2
-
+                                    Quantidade de itens encontrados: ${Contador}
                                 </td>
                             </tr>
                             <tr class="textoCZA_12B" height="20px" id="tdCodigo" runat="server">
@@ -153,29 +152,21 @@
                                     	    <table width="95%" border="1" align="center" cellpadding="0" cellspacing="0"  >
                                                 <tr class="textoBR_12B" bgcolor="#6fa5d4">
                                                     <td width="100px" height="20px">&nbsp;Nome</td>
-                                                    <td width="100px">&nbsp;Nome</td>
-                                                    <td width="100px">&nbsp;Nome</td>
+                                                    <td width="100px">&nbsp;Ramal</td>
+                                                    <td width="100px">&nbsp;e-mail</td>
                                                     <td width="100px">&nbsp;Status</td>
                                                     <td width="100px">&nbsp;Editar</td>
-                                                    <td width="100px">&nbsp;Visualizar</td>
                                                 </tr>
 
-                                                <tr class="textoCZA_12" bgcolor="#ffffff">
-                                                    <td>&nbsp;Bruno</td>
-                                                    <td>&nbsp;Bruno</td>
-                                                    <td>&nbsp;Bruno</td>
-                                                    <td>&nbsp;Aberto</td>
-                                                    <td width="100px">&nbsp;<a href="usuarios.jsp" class="textoLnkMenu_12B">Editar</a></td>
-                                                    <td width="100px">&nbsp;<a href="detalhesusuario.jsp" class="textoLnkMenu_12B">Detalhes</a></td>
-                                                </tr>
-                                                <tr class="textoCZA_12" bgcolor="#ffffff">
-                                                    <td>&nbsp;Bruno</td>
-                                                    <td>&nbsp;Bruno</td>
-                                                    <td>&nbsp;Bruno</td>
-                                                    <td>&nbsp;Fechado</td>
-                                                    <td width="100px">&nbsp;<a href="usuarios.jsp" class="textoLnkMenu_12B">Editar</a></td>
-                                                    <td width="100px">&nbsp;<a href="detalhesusuario.jsp" class="textoLnkMenu_12B">Detalhes</a></td>
-                                                </tr>
+                                                <c:forEach var="usuario" items="${lista}" varStatus="rowCounter">
+                                                    <tr class="textoCZA_12" bgcolor="#ffffff">
+                                                        <td>${usuario.nome}</td>
+                                                        <td>${usuario.ramal}</td>
+                                                        <td>${usuario.email}</td>
+                                                        <td>&nbsp;Aberto</td>
+                                                        <td width="100px">&nbsp;<a href="detalhesusuario.jsp" class="textoLnkMenu_12B">Detalhes</a></td>
+                                                    </tr>
+                                                </c:forEach>
                                             </table>
 
 
