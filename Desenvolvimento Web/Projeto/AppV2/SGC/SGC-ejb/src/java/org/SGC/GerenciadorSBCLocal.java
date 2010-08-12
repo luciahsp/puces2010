@@ -9,11 +9,12 @@ import java.util.List;
  */
 @Local
 public interface GerenciadorSBCLocal {
-        //Usuários
+    //Usuários
     public List<Usuario> listarUsuarios();
     public Usuario recuperaUsuario(String nome);
     public Usuario recuperaUsuario(int id);
     public void insereUsuario(Usuario user);
+    public void atualizaUsuario(Usuario user);
 
     //Chamados
     public List<Chamado> listarChamados();

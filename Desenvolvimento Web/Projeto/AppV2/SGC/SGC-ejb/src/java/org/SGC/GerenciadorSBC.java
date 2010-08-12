@@ -48,6 +48,10 @@ public class GerenciadorSBC implements GerenciadorSBCLocal {
         em.persist(user);
     }
 
+    public void atualizaUsuario(Usuario user) {
+        em.merge(user);
+    }
+
     public List<Arearesponsavel> listarAreasResponsaveis() {
          Query q = em.createQuery("SELECT a FROM Arearesponsavel a");
          return q.getResultList();
