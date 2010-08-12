@@ -25,9 +25,9 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "LOCAL")
 @NamedQueries({
-    @NamedQuery(name = "Local.findAll", query = "SELECT l FROM Local l"),
-    @NamedQuery(name = "Local.findByIdLocal", query = "SELECT l FROM Local l WHERE l.idLocal = :idLocal"),
-    @NamedQuery(name = "Local.findByNome", query = "SELECT l FROM Local l WHERE l.nome = :nome")})
+    @NamedQuery(name = "LocalDepartamento.findAll", query = "SELECT l FROM LocalDepartamento l"),
+    @NamedQuery(name = "LocalDepartamento.findByIdLocal", query = "SELECT l FROM LocalDepartamento l WHERE l.idLocal = :idLocal"),
+    @NamedQuery(name = "LocalDepartamento.findByNome", query = "SELECT l FROM LocalDepartamento l WHERE l.nome = :nome")})
 public class LocalDepartamento implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
@@ -103,7 +103,7 @@ public class LocalDepartamento implements Serializable {
 
     @Override
     public String toString() {
-        return "org.SGC.Local[idLocal=" + idLocal + "]";
+        return "org.SGC.LocalDepartamento[idLocal=" + idLocal + "]";
     }
 
 }
