@@ -49,7 +49,8 @@ public class GerenciadorSBC implements GerenciadorSBCLocal {
     }
 
     public List<Arearesponsavel> listarAreasResponsaveis() {
-        throw new UnsupportedOperationException("Not supported yet.");
+         Query q = em.createQuery("SELECT a FROM Arearesponsavel a");
+         return q.getResultList();
     }
 
     public List<Chamadoacao> listarChamadoAcoes(Chamado chamado) {
@@ -60,8 +61,9 @@ public class GerenciadorSBC implements GerenciadorSBCLocal {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
-    public List<Local> listarLocais() {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public List<LocalDepartamento> listarLocais() {
+         Query q = em.createQuery("SELECT l FROM Local l");
+         return q.getResultList();
     }
 
     public List<Nivelacesso> listarNiveisDeAcesso() {

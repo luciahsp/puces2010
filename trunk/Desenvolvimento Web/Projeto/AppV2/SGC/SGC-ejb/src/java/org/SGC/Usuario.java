@@ -53,7 +53,7 @@ public class Usuario implements Serializable {
     private Arearesponsavel idArearesponsavel;
     @JoinColumn(name = "ID_LOCAL", referencedColumnName = "ID_LOCAL")
     @ManyToOne
-    private Local idLocal;
+    private LocalDepartamento idLocal;
     @JoinColumn(name = "ID_NIVELACESSO", referencedColumnName = "ID_NIVELACESSO")
     @ManyToOne
     private Nivelacesso idNivelacesso;
@@ -117,11 +117,11 @@ public class Usuario implements Serializable {
         this.idArearesponsavel = idArearesponsavel;
     }
 
-    public Local getIdLocal() {
+    public LocalDepartamento getIdLocal() {
         return idLocal;
     }
 
-    public void setIdLocal(Local idLocal) {
+    public void setIdLocal(LocalDepartamento idLocal) {
         this.idLocal = idLocal;
     }
 
