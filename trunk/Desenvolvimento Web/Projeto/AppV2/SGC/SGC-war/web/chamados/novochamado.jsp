@@ -182,5 +182,9 @@
             </tr>
         </table>
 
+        <c:if test="${erro != null}">
+            <script language="javascript">alert("${erro}"); </script>
+        </c:if>
+
     </body>
 </html>
