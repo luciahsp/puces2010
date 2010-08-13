@@ -20,6 +20,10 @@ public class GerenciadorSBC implements GerenciadorSBCLocal {
         em.persist(chamado);
     }
 
+    public void atualizaChamado(Chamado chamado) {
+        em.merge(chamado);
+    }
+
     public void insereChamadoAcao(Chamado chamado) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
