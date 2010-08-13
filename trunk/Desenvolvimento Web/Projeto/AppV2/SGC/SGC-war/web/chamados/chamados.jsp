@@ -1,5 +1,5 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt" %>
+<%@taglib prefix="f" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
@@ -98,7 +98,7 @@
                                                 <td>${lista.idArearesponsavel.nome}</td>
                                                 <td>${lista.idProblema.descricao}</td>
                                                 <td>${lista.descricao}</td>
-                                                <td>${lista.dataabertura}</td>
+                                                <td><f:formatDate pattern="dd/MM/yyyy" value="${lista.dataabertura}" /></td>
                                                 <td>${lista.idStatusatendimentoatual.nome}</td>
                                                 <td width="100px">&nbsp;<a href="chamadoServlet?idChamado=${lista.idChamado}" class="textoLnkMenu_12B">Editar</a></td>
                                             </tr>
@@ -173,7 +173,7 @@
                                                 <td>${lista.idArearesponsavel.nome}</td>
                                                 <td>${lista.idProblema.descricao}</td>
                                                 <td>${lista.descricao}</td>
-                                                <td>${lista.dataabertura}</td>
+                                                <td><f:formatDate pattern="dd/MM/yyyy" value="${lista.dataabertura}" /></td>
                                                 <td>${lista.idStatusatendimentoatual.nome}</td>
                                                 <td width="100px">&nbsp;<a href="chamadoServlet?idChamado=${lista.idChamado}" class="textoLnkMenu_12B">Editar</a></td>
                                             </tr>
