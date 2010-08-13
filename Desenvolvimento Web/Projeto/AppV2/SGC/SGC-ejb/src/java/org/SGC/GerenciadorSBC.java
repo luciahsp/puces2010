@@ -17,7 +17,7 @@ public class GerenciadorSBC implements GerenciadorSBCLocal {
     }
 
     public void insereChamado(Chamado chamado) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        em.persist(chamado);
     }
 
     public void insereChamadoAcao(Chamado chamado) {
