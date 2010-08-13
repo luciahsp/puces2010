@@ -98,6 +98,11 @@ public class GerenciadorSBC implements GerenciadorSBCLocal {
          return q.getResultList();
     }
 
+    public List<Usuario> listarUsuarios(String nome) {
+         Query q = em.createQuery("SELECT u FROM Usuario u WHERE u.Nome Like " + nome);
+         return q.getResultList();
+    }
+
     public Arearesponsavel recuperaAreaResponsavel(int id) {
         Arearesponsavel a = new Arearesponsavel();
         a = (Arearesponsavel) em.createNamedQuery("Arearesponsavel.findByIdArearesponsavel").setParameter("idArearesponsavel", id).getSingleResult();
