@@ -100,7 +100,7 @@
                                                 <td>${lista.descricao}</td>
                                                 <td><f:formatDate pattern="dd/MM/yyyy" value="${lista.dataabertura}" /></td>
                                                 <td>${lista.idStatusatendimentoatual.nome}</td>
-                                                <td width="100px">&nbsp;<a href="chamadoServlet?idChamado=${lista.idChamado}" class="textoLnkMenu_12B">Editar</a></td>
+                                                <td width="100px">&nbsp;<a href="chamadoAcaoServlet?idChamado=${lista.idChamado}" class="textoLnkMenu_12B">Editar</a></td>
                                             </tr>
                                         </c:forEach>
 
@@ -175,7 +175,7 @@
                                                 <td>${lista.descricao}</td>
                                                 <td><f:formatDate pattern="dd/MM/yyyy" value="${lista.dataabertura}" /></td>
                                                 <td>${lista.idStatusatendimentoatual.nome}</td>
-                                                <td width="100px">&nbsp;<a href="chamadoServlet?idChamado=${lista.idChamado}" class="textoLnkMenu_12B">Editar</a></td>
+                                                <td width="100px">&nbsp;<a href="chamadoAcaoServlet?idChamado=${lista.idChamado}" class="textoLnkMenu_12B">Editar</a></td>
                                             </tr>
                                         </c:forEach>
 
