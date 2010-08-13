@@ -89,34 +89,32 @@
                             <tr>
                                 <td colspan="3">&nbsp;</td>
                             </tr>
-                            <tr class="textoCZA_12B" height="20px" id="tdCodigo" runat="server">
+                            <tr class="textoCZA_12B" height="25px">
                                 <td width="10px" ></td>
-                                <td width="80px"></td>
-                                <td><input type="hidden" id="codigo" name="codigo" value="${usuarioEsc.idUsuario}" class="imputBR" readonly /></td>
+                                <td width="150px">Nome:</td>
+                                <td>
+                                    <input type="hidden" id="codigo" name="codigo" value="${usuarioEsc.idUsuario}" class="imputBR" readonly />
+                                    <input type="text" id="nome" name="nome" value="${usuarioEsc.nome}" class="imputBR" size="50" maxlength="50" />
+                                </td>
                             </tr>
-                            <tr class="textoCZA_12B" height="20px">
-                                <td width="10px" ></td>
-                                <td>Nome:</td>
-                                <td><input type="text" id="nome" name="nome" value="${usuarioEsc.nome}" class="imputBR" size="50" maxlength="50" /></td>
-                            </tr>
-                            <tr class="textoCZA_12B" height="20px">
+                            <tr class="textoCZA_12B" height="25px">
                                 <td width="10px" ></td>
                                 <td>E-mail:</td>
                                 <td><input type="text" id="email" name="email" value="${usuarioEsc.email}" class="imputBR" size="50" maxlength="100" /></td>
                             </tr>
-                            <tr class="textoCZA_12B" height="20px">
+                            <tr class="textoCZA_12B" height="25px">
                                 <td width="10px" ></td>
                                 <td>Ramal:</td>
                                 <td><input type="text" id="ramal" name="ramal" value="${usuarioEsc.ramal}" class="imputBR" maxlength="5" /></td>
                             </tr>
 
-                            <tr class="textoCZA_12B" height="20px">
+                            <tr class="textoCZA_12B" height="25px">
                                 <td width="10px" ></td>
                                 <td>Senha:</td>
                                 <td><input type="password" id="senha" name="senha" value="${usuarioEsc.senha}" class="imputBR" maxlength="10"  /></td>
                             </tr>
 
-                            <tr class="textoCZA_12B" height="20px">
+                            <tr class="textoCZA_12B" height="25px">
                                 <td width="10px" ></td>
                                 <td>Área Responsável:</td>
                                 <td>
@@ -128,7 +126,7 @@
                                 </td>
                             </tr>
 
-                            <tr class="textoCZA_12B" height="20px">
+                            <tr class="textoCZA_12B" height="25px">
                                 <td width="10px" ></td>
                                 <td>Local:</td>
                                 <td><select name="local">
@@ -139,7 +137,7 @@
                                 </td>
                             </tr>
 
-                            <tr class="textoCZA_12B" height="20px">
+                            <tr class="textoCZA_12B" height="25px">
                                 <td width="10px" ></td>
                                 <td>Nível de Acesso:</td>
                                 <td><select name="acesso">
