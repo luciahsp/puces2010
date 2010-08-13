@@ -1,3 +1,4 @@
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
    "http://www.w3.org/TR/html4/loose.dtd">
@@ -7,17 +8,17 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title> .:: SGC - Sistema de Gerenciamento de Chamados ::. </title>
 
-        <link href="../_styles/StyleMain.css" rel="stylesheet" type="text/css" />
+        <link href="_styles/StyleMain.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
 
         <table id="tblTitulo" runat="server" cellspacing="0" cellpadding="0" border="0" style="TABLE-LAYOUT:fixed" align="center">
             <tr>
-                <td height="31" width="38"><img src="../_imagens/Barra01_01.gif" border="0" runat="server" id="img1"></td>
-                <td height="31" width="100%" background="../_imagens/Barra01_02.gif">
+                <td height="31" width="38"><img src="_imagens/Barra01_01.gif" border="0" runat="server" id="img1"></td>
+                <td height="31" width="100%" background="_imagens/Barra01_02.gif">
                     <span class="tituloBarra">Ocorrências</span>
                 </td>
-                <td height="31" width="5" background="../_imagens/Barra01_02.gif"><img src="../_imagens/Barra01_02.gif" border="0" runat="server" id="img2"></td>
+                <td height="31" width="5" background="_imagens/Barra01_02.gif"><img src="_imagens/Barra01_02.gif" border="0" runat="server" id="img2"></td>
             </tr>
         </table>
 
@@ -31,14 +32,14 @@
                         <tr>
                             <td width="5"></td>
                             <td  class="textoLR_15B">Chamados Abertos</td>
-                            <td align="right"><a href="../home.jsp" class="textoLnkMenu_12B">Voltar</a></td>
+                            <td align="right"><a href="home.jsp" class="textoLnkMenu_12B">Voltar</a></td>
                             <td width="20">&nbsp;</td>
                         </tr>
                     </table>
 
                 </td>
             </tr>
-            
+
         </table>
 
         <!-- INICIO - Ocorrencias Pendentes Por Usuário -->
@@ -78,31 +79,32 @@
                                     <!-- Tabela de Resultado -->
                                     <table width="95%" border="1" align="center" cellpadding="0" cellspacing="0"  >
                                         <tr class="textoBR_12B" bgcolor="#6fa5d4">
-                                            <td width="100px" height="20px">&nbsp;Nome</td>
-                                            <td width="100px">&nbsp;Nome</td>
-                                            <td width="100px">&nbsp;Nome</td>
-                                            <td width="100px">&nbsp;Status</td>
-                                            <td width="100px">&nbsp;Editar</td>
-                                            <td width="100px">&nbsp;Visualizar</td>
+                                            <td width="100px" height="20px">Nome</td>
+                                            <td width="100px">Departamento</td>
+                                            <td width="100px">Área Responsável</td>
+                                            <td width="100px">Problema</td>
+                                            <td width="100px">Descrição</td>
+                                            <td width="100px">Data Abertura</td>
+                                            <td width="100px">Status</td>
+                                            <td width="100px">Editar</td>
+                                            <td width="100px">Visualizar</td>
                                         </tr>
+                                        
+                                        <c:forEach var="lista" items="${listaNivel}">
+                                             <tr class="textoCZA_12" bgcolor="#ffffff">
+                                                <td>Nome</td>
+                                                <td>Departamento</td>
+                                                <td>Area</td>
+                                                <td>Problema</td>
+                                                <td>Descricao</td>
+                                                <td>Data</td>
+                                                <td>Status</td>
+                                                <td width="100px">&nbsp;<a href="novochamado.jsp" class="textoLnkMenu_12B">Editar</a></td>
+                                                <td width="100px">&nbsp;<a href="detalheschamado.jsp" class="textoLnkMenu_12B">Detalhes</a></td>
+                                            </tr>
+                                        </c:forEach>
 
-                                        <tr class="textoCZA_12" bgcolor="#ffffff">
-                                            <td>&nbsp;Bruno</td>
-                                            <td>&nbsp;Bruno</td>
-                                            <td>&nbsp;Bruno</td>
-                                            <td>&nbsp;Aberto</td>
-                                            <td width="100px">&nbsp;<a href="novochamado.jsp" class="textoLnkMenu_12B">Editar</a></td>
-                                            <td width="100px">&nbsp;<a href="detalheschamado.jsp" class="textoLnkMenu_12B">Detalhes</a></td>
-                                        </tr>
-                                        <tr class="textoCZA_12" bgcolor="#ffffff">
-                                            <td>&nbsp;Bruno</td>
-                                            <td>&nbsp;Bruno</td>
-                                            <td>&nbsp;Bruno</td>
-                                            <td>&nbsp;Fechado</td>
-                                            <td width="100px">&nbsp;<a href="novochamado.jsp" class="textoLnkMenu_12B">Editar</a></td>
-                                            <td width="100px">&nbsp;<a href="detalheschamado.jsp" class="textoLnkMenu_12B">Detalhes</a></td>
-                                        </tr>
-                                    </table>
+                                        </table>
 
 
                                 </td>
@@ -154,31 +156,29 @@
                                     <!-- Tabela de Resultado -->
                                     <table width="95%" border="1" align="center" cellpadding="0" cellspacing="0"  >
                                         <tr class="textoBR_12B" bgcolor="#6fa5d4">
-                                            <td width="100px" height="20px">&nbsp;Nome</td>
-                                            <td width="100px">&nbsp;Nome</td>
-                                            <td width="100px">&nbsp;Nome</td>
-                                            <td width="100px">&nbsp;Status</td>
-                                            <td width="100px">&nbsp;Editar</td>
-                                            <td width="100px">&nbsp;Visualizar</td>
+                                            <td width="100px" height="20px">Nome</td>
+                                            <td width="100px">Departamento</td>
+                                            <td width="100px">Área Responsável</td>
+                                            <td width="100px">Problema</td>
+                                            <td width="100px">Descrição</td>
+                                            <td width="100px">Data Abertura</td>
+                                            <td width="100px">Status</td>
+                                            <td width="100px">Editar</td>
+                                            <td width="100px">Visualizar</td>
                                         </tr>
 
                                         <tr class="textoCZA_12" bgcolor="#ffffff">
-                                            <td>&nbsp;Bruno</td>
-                                            <td>&nbsp;Bruno</td>
-                                            <td>&nbsp;Bruno</td>
-                                            <td>&nbsp;Aberto</td>
+                                            <td>Nome</td>
+                                            <td>Departamento</td>
+                                            <td>Area</td>
+                                            <td>Problema</td>
+                                            <td>Descricao</td>
+                                            <td>Data</td>
+                                            <td>Status</td>
                                             <td width="100px">&nbsp;<a href="novochamado.jsp" class="textoLnkMenu_12B">Editar</a></td>
                                             <td width="100px">&nbsp;<a href="detalheschamado.jsp" class="textoLnkMenu_12B">Detalhes</a></td>
                                         </tr>
-                                        <tr class="textoCZA_12" bgcolor="#ffffff">
-                                            <td>&nbsp;Bruno</td>
-                                            <td>&nbsp;Bruno</td>
-                                            <td>&nbsp;Bruno</td>
-                                            <td>&nbsp;Fechado</td>
-                                            <td width="100px">&nbsp;<a href="novochamado.jsp" class="textoLnkMenu_12B">Editar</a></td>
-                                            <td width="100px">&nbsp;<a href="detalheschamado.jsp" class="textoLnkMenu_12B">Detalhes</a></td>
-                                        </tr>
-                                    </table>
+                                        </table>
 
 
                                 </td>
