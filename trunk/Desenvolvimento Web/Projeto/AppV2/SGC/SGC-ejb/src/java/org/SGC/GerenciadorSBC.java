@@ -146,12 +146,16 @@ public class GerenciadorSBC implements GerenciadorSBCLocal {
         return n;
     }
 
-    public Local recuperaProblema(int id) {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public Problema recuperaProblema(int id) {
+        Problema p = new Problema();
+        p = (Problema) em.createNamedQuery("Problema.findByIdProblema").setParameter("idProblema", id).getSingleResult();
+        return p;
     }
 
     public Statusatendimento recuperaStatusAtendimento(int id) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        Statusatendimento s = new Statusatendimento();
+        s = (Statusatendimento) em.createNamedQuery("Statusatendimento.findByIdStatusatendimento").setParameter("idStatusatendimento", id).getSingleResult();
+        return s;
     }
 
     public Unidade recuperaUnidade(int id) {

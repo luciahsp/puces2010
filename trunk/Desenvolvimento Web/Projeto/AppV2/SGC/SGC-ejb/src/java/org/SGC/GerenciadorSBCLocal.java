@@ -42,7 +42,7 @@ public interface GerenciadorSBCLocal {
 
     //Problemas
     public List<Problema> listarProblemas();
-    public Local recuperaProblema(int id);
+    public Problema recuperaProblema(int id);
     public void insereProblema(Problema problema);
 
     //Status de Atendimento
@@ -59,5 +59,7 @@ public interface GerenciadorSBCLocal {
     public List<Arearesponsavel> listarAreasResponsaveis();
     public Arearesponsavel recuperaAreaResponsavel(int id);
     public void insereAreaResponsavel(Arearesponsavel area);
+
+    public void atualizaChamado(org.SGC.Chamado chamado);
 
 }
