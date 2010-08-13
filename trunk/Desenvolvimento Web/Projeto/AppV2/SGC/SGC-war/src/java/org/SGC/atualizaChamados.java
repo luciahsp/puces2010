@@ -44,7 +44,7 @@ public class atualizaChamados extends HttpServlet {
         chamado.setIdStatusatendimentoatual(status);
         chamado.setDescricao(request.getParameter("descricao"));
         chamado.setDataabertura(new Date());
-        //chamado.setHoraabertura(new Date());
+        chamado.setHoraabertura(new Date());
 
         try {
            if(alteracao) {
@@ -56,7 +56,7 @@ public class atualizaChamados extends HttpServlet {
            request.setAttribute("erro", "Erro: " + e.toString());
        }
 
-       response.sendRedirect("novochamado.jsp");
+       response.sendRedirect("chamadoAcaoServlet?idChamado=" + chamado.getIdChamado().toString());
 
 
     }
