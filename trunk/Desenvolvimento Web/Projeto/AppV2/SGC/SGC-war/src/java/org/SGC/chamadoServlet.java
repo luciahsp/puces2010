@@ -32,16 +32,22 @@ public class chamadoServlet extends HttpServlet {
         List<LocalDepartamento> listaLocais = null;
         listaLocais = gerenciadorSBC.listarLocais();
 
+        //Lista de Status
+        List<Statusatendimento> listaStatus = null;
+        listaStatus = gerenciadorSBC.listarStatusAtendimento();
+
         Integer id = 0;
         if (request.getParameter("idChamado") != null)
         {
             id = Integer.parseInt(request.getParameter("idChamado"));
-            chamado = gerenciadorSBC.recuperaChamado(id);
+            if (id!=0)
+                chamado = gerenciadorSBC.recuperaChamado(id);
         }
 
         request.setAttribute("listaAreaResp", listaArea);
         request.setAttribute("listaProblemas", listaProblemas);
         request.setAttribute("listaLocais", listaLocais);
+        request.setAttribute("listaStatus", listaStatus);
         request.setAttribute("id", id);
         request.setAttribute("chamado", chamado);
 
