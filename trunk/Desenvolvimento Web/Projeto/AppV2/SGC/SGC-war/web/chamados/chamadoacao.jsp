@@ -10,6 +10,15 @@
         <title> .:: SGC - Sistema de Gerenciamento de Chamados ::. </title>
 
         <link href="_styles/StyleMain.css" rel="stylesheet" type="text/css" />
+
+        <script language="javascript">
+            function valida() {
+                if (document.getElementById("descricao").value == "") {
+                    alert("Preencha a descrição!");
+                    return false;
+                }
+            }
+        </script>
     </head>
     <body>
 
@@ -66,7 +75,6 @@
                             <td width="10px" ></td>
                             <td width="150px">Área Responsável:</td>
                             <td>
-                                <input type="hidden" id="codigo" name="codigo" value="${chamado.idChamado}" class="imputBR" readonly />
                                 ${chamado.idArearesponsavel.nome}
                             </td>
                         </tr>
@@ -118,7 +126,10 @@
                         <tr class="textoCZA_12B" height="25px">
                             <td></td>
                             <td>Status:</td>
-                            <td>${chamado.idStatusatendimentoatual.nome}</td>
+                            <td>
+                                <input type="hidden" id="codigoStatus" name="codigoStatus" value="${chamado.idStatusatendimentoatual.idStatusatendimento}" class="imputBR" readonly />
+                                ${chamado.idStatusatendimentoatual.nome}
+                            </td>
 
                         </tr>
 
@@ -154,35 +165,36 @@
                                     <td width="10px" ></td>
                                     <td width="150px">Operador:</td>
                                     <td>
-                                        ${listaOcorrencias.idStatusatendimento}
+                                        ${listaOcorrencias.idUsuario.nome}
                                     </td>
                                 </tr>
                                 <tr class="textoCZA_12B" height="25px">
                                     <td></td>
                                     <td>Status Anterior:</td>
                                     <td>
-                                        ${listaOcorrencias.idStatusatendimento}
+                                        ${listaOcorrencias.idStatusatendimentoanterior.nome}
                                     </td>
                                 </tr>
                                 <tr class="textoCZA_12B" height="25px">
                                     <td></td>
                                     <td>Status Atual:</td>
                                     <td>
-                                        ${listaOcorrencias.idStatusatendimento}
+                                        ${listaOcorrencias.idStatusatendimentoatual.nome}
                                     </td>
                                 </tr>
                                 <tr class="textoCZA_12B" height="25px">
                                     <td></td>
                                     <td>Descrição:</td>
                                     <td>
-                                        ${listaOcorrencias.idStatusatendimento}
+                                        ${listaOcorrencias.descricao}
                                     </td>
                                 </tr>
                                 <tr class="textoCZA_12B" height="25px">
                                     <td></td>
                                     <td>Data Ocorrência:</td>
                                     <td>
-                                        ${listaOcorrencias.idStatusatendimento} ${listaOcorrencias.idStatusatendimento}
+                                        <f:formatDate pattern="dd/MM/yyyy" value="${listaOcorrencias.data}" /> -
+                                        <f:formatDate pattern="hh:mm:ss" value="${listaOcorrencias.hora}" />
                                     </td>
                                 </tr>
                             </table>
@@ -211,6 +223,9 @@
             <tr>
                 <td>
 
+                    <form action="atualizaChamadoAcao" method="post" onsubmit="return valida();">
+
+                        <input type="hidden" id="codigo" name="codigo" value="${id}" class="imputBR" readonly />
                     <table border="0" cellpadding="0" cellspacing="0">
                         
                         <tr class="textoCZA_12B" height="25px" id="tdCodigo" runat="server">
@@ -258,6 +273,7 @@
                             <td width="40"></td>
                         </tr>
                     </table>
+                    </form>
 
                 </td>
             </tr>
