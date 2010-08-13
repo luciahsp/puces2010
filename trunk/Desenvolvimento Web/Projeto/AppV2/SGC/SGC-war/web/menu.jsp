@@ -51,7 +51,7 @@
                     <table width="100%" border="0" cellspacing="0" cellpadding="0">
                         <tr>
                             <td width="12" align="left" height="15px"><img src="_imagens/Seta2.jpg"></td>
-                            <td width="491" align="left" height="15px">&nbsp;&nbsp;<a href="chamados/chamados.jsp" target="fraBody" class="textoLnkMenu_12B">Chamados Abertos</a></td>
+                            <td width="491" align="left" height="15px">&nbsp;&nbsp;<a href="listaChamadosAbertosServlet" target="fraBody" class="textoLnkMenu_12B">Chamados Abertos</a></td>
                         </tr>
                         <tr>
                             <td align="left"><img src="_imagens/Seta2.jpg"></td>
