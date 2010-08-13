@@ -11,6 +11,7 @@ import java.util.List;
 public interface GerenciadorSBCLocal {
     //Usuários
     public List<Usuario> listarUsuarios();
+    public List<Usuario> listarUsuarios(String nome);
     public Usuario recuperaUsuario(String nome);
     public Usuario recuperaUsuario(int id);
     public void insereUsuario(Usuario user);
