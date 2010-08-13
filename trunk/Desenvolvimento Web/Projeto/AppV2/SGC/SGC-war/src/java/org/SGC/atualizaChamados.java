@@ -26,7 +26,7 @@ public class atualizaChamados extends HttpServlet {
           alteracao = true;
         }
 
-        Arearesponsavel area = gerenciadorSBC.recuperaAreaResponsavel(Integer.parseInt(request.getParameter("listaAreaResp")));
+        Arearesponsavel area = gerenciadorSBC.recuperaAreaResponsavel(Integer.parseInt(request.getParameter("areaResp")));
         Problema problema = gerenciadorSBC.recuperaProblema(Integer.parseInt(request.getParameter("problema")));
         LocalDepartamento local = gerenciadorSBC.recuperaLocal(Integer.parseInt(request.getParameter("local")));
 
