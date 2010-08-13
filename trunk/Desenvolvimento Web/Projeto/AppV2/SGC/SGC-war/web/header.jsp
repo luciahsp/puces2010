@@ -87,7 +87,7 @@
                             <td width="10" valign="top"><img src="_imagens/BarraCZA_01.jpg" width="3" height="23"></td>
                             <td width="63" valign="middle">                                
                                 <a href="javascript:showHideMenu();"><img src="_imagens/SetaLR-02.jpg" width="10" height="10" border="0" id="imgLink" alt="Recolher / Expandir Cabeçalho"></a>
-                                &nbsp;<a href="login.jsp" target=_blank onclick="window.location=<%session.invalidate();%>" class="textoLnkMenu_12B">Sair</a>
+                                &nbsp;<a href=logout.jsp target=_parent class="textoLnkMenu_12B">Sair</a>
                             </td>
                         </tr>
                     </table>
