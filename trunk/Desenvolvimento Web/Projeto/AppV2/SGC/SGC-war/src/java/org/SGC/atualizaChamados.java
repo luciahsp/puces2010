@@ -32,7 +32,7 @@ public class atualizaChamados extends HttpServlet {
 
         Statusatendimento status = new Statusatendimento(1);
         if (alteracao==true){
-            status = gerenciadorSBC.recuperaStatusAtendimento(Integer.parseInt(request.getParameter("listaStatus")));
+            status = gerenciadorSBC.recuperaStatusAtendimento(Integer.parseInt(request.getParameter("status")));
         }
 
         Usuario usuario = gerenciadorSBC.recuperaUsuario(Integer.parseInt(request.getParameter("codigoUser")));
