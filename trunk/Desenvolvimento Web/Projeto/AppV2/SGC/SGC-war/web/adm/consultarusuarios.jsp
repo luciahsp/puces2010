@@ -1,5 +1,5 @@
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
    "http://www.w3.org/TR/html4/loose.dtd">
 
@@ -9,6 +9,16 @@
         <title> .:: SGC - Sistema de Gerenciamento de Chamados ::. </title>
 
         <link href="_styles/StyleMain.css" rel="stylesheet" type="text/css" />
+
+                <script language="javascript">
+            function valida() {
+                if (document.getElementById("nome").value == "") {
+                    alert("Preencha o nome do usuário !");
+                    return false;
+                }
+
+            }
+        </script>
     </head>
     <body>
 
@@ -60,7 +70,7 @@
             <tr>
                 <td>
 
-                    <form action="" method="post" onsubmit="">
+                    <form action="ListaUsuarios" method="post" onsubmit="return Valida();">
 
                         <table border="0" cellpadding="0" cellspacing="0">
                             <tr>
@@ -69,7 +79,7 @@
                             <tr class="textoCZA_12B" height="20px" id="tdNome" runat="server">
                                 <td width="10px" ></td>
                                 <td width="80px">Nome:</td>
-                                <td><input type="text" id="" name="" value="" class="imputBR"  /></td>
+                                <td><input type="text" id="nome" name="nome" value="" class="imputBR"  /></td>
                             </tr>
                             
                         </table>
@@ -141,6 +151,7 @@
 
                                                 <c:forEach var="usuario" items="${lista}" varStatus="rowCounter">
                                                     <tr class="textoCZA_12" bgcolor="#ffffff">
+
                                                         <td>${usuario.nome}</td>
                                                         <td>${usuario.ramal}</td>
                                                         <td>${usuario.email}</td>
@@ -157,7 +168,7 @@
 
 
                                                         </td>
-                                                        <td width="100px">&nbsp;<a href="detalhesusuario.jsp" class="textoLnkMenu_12B">Detalhes</a></td>
+                                                        <td width="100px">&nbsp;<a href="usuarioServlet?idUsuario=<codigo>" class="textoLnkMenu_12B">Detalhes</a></td>
                                                     </tr>
                                                 </c:forEach>
                                             </table>
