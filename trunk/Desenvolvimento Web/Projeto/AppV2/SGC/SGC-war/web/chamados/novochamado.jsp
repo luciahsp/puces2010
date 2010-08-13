@@ -9,6 +9,16 @@
         <title> .:: SGC - Sistema de Gerenciamento de Chamados ::. </title>
 
         <link href="_styles/StyleMain.css" rel="stylesheet" type="text/css" />
+
+        <script language="javascript">
+            function valida() {
+                if (document.getElementById("descricao").value == "") {
+                    alert("Preencha a descrição!");
+                    return false;
+                }
+            }
+        </script>
+
     </head>
     <body>
 
@@ -59,7 +69,7 @@
             <tr>
                 <td>
 
-                    <form action="" method="post" onsubmit="">
+                    <form action="" method="post" onsubmit="return valida();">
 
                         <table border="0" cellpadding="0" cellspacing="0">
                             <tr>
@@ -72,7 +82,7 @@
                                     <input type="hidden" id="codigo" name="codigo" value="${chamado.idChamado}" class="imputBR" readonly />
                                     <select style="width: 250px" id="areaResp" name="areaResp" class="imputBR">
                                         <c:forEach var="listaAreaResp" items="${listaAreaResp}">
-                                            <option id="${listaAreaResp.idArearesponsavel}">${listaAreaResp.nome}</option>
+                                            <option <c:if test="${listaAreaResp.idArearesponsavel==chamado.idArearesponsavel.idArearesponsavel}">selected</c:if> id="${listaAreaResp.idArearesponsavel}">${listaAreaResp.nome}</option>
                                         </c:forEach>
                                     </select>
                                 </td>
@@ -83,7 +93,7 @@
                                 <td>
                                     <select style="width: 250px" id="problema" name="problema" class="imputBR">
                                         <c:forEach var="listaProblemas" items="${listaProblemas}">
-                                            <option id="${listaProblemas.idProblema}">${listaProblemas.descricao}</option>
+                                            <option <c:if test="${listaProblemas.idProblema==chamado.idProblema.idProblema}">selected</c:if> id="${listaProblemas.idProblema}">${listaProblemas.descricao}</option>
                                         </c:forEach>
                                     </select>
                                 </td>
@@ -91,7 +101,7 @@
                             <tr class="textoCZA_12B" height="25px">
                                 <td></td>
                                 <td>Descrição:</td>
-                                <td><textarea id="descricao" name="descricao" cols="20" rows="2" style="width: 250px; height: 50px" class="imputBR"></textarea></td>
+                                <td><textarea id="descricao" name="descricao" value="${chamado.descricao}" cols="20" rows="2" style="width: 250px; height: 50px" class="imputBR"></textarea></td>
                             </tr>
                             <tr class="textoCZA_12B" height="25px">
                                 <td></td>
@@ -99,7 +109,7 @@
                                 <td>
                                     <select style="width: 250px" id="local" name="local" class="imputBR">
                                         <c:forEach var="listaLocais" items="${listaLocais}">
-                                            <option id="${listaLocais.idLocal}">${listaLocais.nome}</option>
+                                            <option <c:if test="${listaLocais.idLocal==chamado.idLocal.idLocal}">selected</c:if> id="${listaLocais.idLocal}">${listaLocais.nome}</option>
                                         </c:forEach>
                                     </select>
                                 </td>
@@ -108,20 +118,25 @@
                             <tr class="textoCZA_12B" height="25px">
                                 <td></td>
                                 <td>Data de Abertura:</td>
-                                <td><input type="text" id="dataAbertura" name="dataAbertura" value="" class="imputBR"  /></td>
+                                <td><input type="text" id="dataAbertura" name="dataAbertura" value="${chamado.dataabertura} ${chamado.horaabertura}" class="imputBR"  /></td>
                             </tr>
                             <tr class="textoCZA_12B" height="25px">
                                 <td></td>
                                 <td>Data de Fechamento:</td>
-                                <td><input type="text" id="dataFechamento" name="dataFechamento" value="" class="imputBR"  /></td>
+                                <td><input type="text" id="dataFechamento" name="dataFechamento" value="${chamado.datafechamento} ${chamado.horafechamento}" class="imputBR"  /></td>
                             </tr>
                             </c:if>
                             <tr class="textoCZA_12B" height="25px">
                                 <td></td>
                                 <td>Operador:</td>
                                 <td>
-                                    <c:if test="${sessionScope.login != null}">
-                                        ${sessionScope.login.nome}
+                                    <c:if test="${chamado.idUsuario == null}">
+                                        <c:if test="${sessionScope.login != null}">
+                                            ${sessionScope.login.nome}
+                                        </c:if>
+                                    </c:if>
+                                    <c:if test="${chamado.idUsuario != null}">
+                                        ${chamado.idUsuario.nome}
                                     </c:if>
                                 </td>
                             </tr>
