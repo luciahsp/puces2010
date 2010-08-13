@@ -69,8 +69,8 @@
                                 <td width="10px" ></td>
                                 <td width="150px">Área Responsável:</td>
                                 <td>
-
-                                    <select style="width: 250px" id="Select1" class="imputBR">
+                                    <input type="hidden" id="codigo" name="codigo" value="${chamado.idChamado}" class="imputBR" readonly />
+                                    <select style="width: 250px" id="areaResp" name="areaResp" class="imputBR">
                                         <c:forEach var="listaAreaResp" items="${listaAreaResp}">
                                             <option id="${listaAreaResp.idArearesponsavel}">${listaAreaResp.nome}</option>
                                         </c:forEach>
@@ -81,7 +81,7 @@
                                 <td></td>
                                 <td>Problema:</td>
                                 <td>
-                                    <select style="width: 250px" id="Select1" class="imputBR">
+                                    <select style="width: 250px" id="problema" name="problema" class="imputBR">
                                         <c:forEach var="listaProblemas" items="${listaProblemas}">
                                             <option id="${listaProblemas.idProblema}">${listaProblemas.descricao}</option>
                                         </c:forEach>
@@ -91,13 +91,13 @@
                             <tr class="textoCZA_12B" height="25px">
                                 <td></td>
                                 <td>Descrição:</td>
-                                <td><textarea id="TextArea1" cols="20" rows="2" style="width: 250px; height: 50px" class="imputBR"></textarea></td>
+                                <td><textarea id="descricao" name="descricao" cols="20" rows="2" style="width: 250px; height: 50px" class="imputBR"></textarea></td>
                             </tr>
                             <tr class="textoCZA_12B" height="25px">
                                 <td></td>
                                 <td>Local:</td>
                                 <td>
-                                    <select style="width: 250px" id="Select1" class="imputBR">
+                                    <select style="width: 250px" id="local" name="local" class="imputBR">
                                         <c:forEach var="listaLocais" items="${listaLocais}">
                                             <option id="${listaLocais.idLocal}">${listaLocais.nome}</option>
                                         </c:forEach>
@@ -108,12 +108,12 @@
                             <tr class="textoCZA_12B" height="25px">
                                 <td></td>
                                 <td>Data de Abertura:</td>
-                                <td><input type="text" id="" name="" value="" class="imputBR"  /></td>
+                                <td><input type="text" id="dataAbertura" name="dataAbertura" value="" class="imputBR"  /></td>
                             </tr>
                             <tr class="textoCZA_12B" height="25px">
                                 <td></td>
                                 <td>Data de Fechamento:</td>
-                                <td><input type="text" id="" name="" value="" class="imputBR"  /></td>
+                                <td><input type="text" id="dataFechamento" name="dataFechamento" value="" class="imputBR"  /></td>
                             </tr>
                             </c:if>
                             <tr class="textoCZA_12B" height="25px">
@@ -132,7 +132,13 @@
                                     <td>Aguardando atendimento</td>
                                 </c:if>
                                 <c:if test="${id!=0}">
-                                    <td><input type="text" id="" name="" value="" class="imputBR"  /></td>
+                                    <td>
+                                        <select style="width: 250px" id="status" name="status" class="imputBR">
+                                            <c:forEach var="listaStatus" items="${listaStatus}">
+                                                <option <c:if test="${listaStatus.idStatusatendimento==chamado.idStatusatendimentoatual.idStatusatendimentoatual}">selected</c:if> id="${listaStatus.idStatusatendimento}">${listaStatus.nome}</option>
+                                            </c:forEach>
+                                        </select>
+                                    </td>
                                 </c:if>
                             </tr>
 
