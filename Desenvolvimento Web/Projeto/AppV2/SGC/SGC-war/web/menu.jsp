@@ -55,7 +55,7 @@
                         </tr>
                         <tr>
                             <td align="left"><img src="_imagens/Seta2.jpg"></td>
-                            <td align="left">&nbsp;&nbsp;<a href="carregarCombosChamado" target="fraBody" class="textoLnkMenu_12B">Abrir Chamado</a></td>
+                            <td align="left">&nbsp;&nbsp;<a href="chamadoServlet" target="fraBody" class="textoLnkMenu_12B">Abrir Chamado</a></td>
                         </tr>
                         <tr>
                             <td align="left"><img src="_imagens/Seta2.jpg"></td>
