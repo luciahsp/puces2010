@@ -100,7 +100,9 @@ public class GerenciadorSBC implements GerenciadorSBCLocal {
     }
 
     public Chamado recuperaChamado(int id) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        Chamado c = new Chamado();
+        c = (Chamado)em.createNamedQuery("Chamado.findByIdChamado").setParameter("idChamado", id).getSingleResult();
+        return c;
     }
 
     public Chamado recuperaChamadoAbertos() {
