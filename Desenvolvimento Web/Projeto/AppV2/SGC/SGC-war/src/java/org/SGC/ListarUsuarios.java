@@ -25,7 +25,18 @@ public class ListarUsuarios extends HttpServlet {
         request.setAttribute("lista", lista);
         request.setAttribute("Contador",lista.size());
         request.getRequestDispatcher("adm/consultarusuarios.jsp").forward(request, response);
-    } 
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+    throws ServletException, IOException {
+
+        List<Usuario> lista = gerenciadorSBC.listarUsuarios(request.getParameter("nome"));
+        request.setAttribute("lista", lista);
+        request.setAttribute("Contador",lista.size());
+        request.getRequestDispatcher("adm/consultarusuarios.jsp").forward(request, response);
+
+        }
 
 
 }
