@@ -1,0 +1,6 @@
+
+Insert Into Problema (DESCRICAO) values ('Configuração de e-mail')
+Insert Into Problema (DESCRICAO) values ('Backup')
+Insert Into Problema (DESCRICAO) values ('Instalação de S.O.');
+Insert Into Problema (DESCRICAO) values ('Instalação de impressora');
+Insert Into Problema (DESCRICAO) values ('Erro de sistema');
