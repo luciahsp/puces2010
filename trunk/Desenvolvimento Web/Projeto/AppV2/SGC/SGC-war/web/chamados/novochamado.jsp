@@ -82,7 +82,7 @@
                                     <input type="hidden" id="codigo" name="codigo" value="${chamado.idChamado}" class="imputBR" readonly />
                                     <select style="width: 250px" id="areaResp" name="areaResp" class="imputBR">
                                         <c:forEach var="listaAreaResp" items="${listaAreaResp}">
-                                            <option <c:if test="${listaAreaResp.idArearesponsavel==chamado.idArearesponsavel.idArearesponsavel}">selected</c:if> id="${listaAreaResp.idArearesponsavel}">${listaAreaResp.nome}</option>
+                                            <option <c:if test="${listaAreaResp.idArearesponsavel==chamado.idArearesponsavel.idArearesponsavel}">selected</c:if> value="${listaAreaResp.idArearesponsavel}">${listaAreaResp.nome}</option>
                                         </c:forEach>
                                     </select>
                                 </td>
@@ -93,7 +93,7 @@
                                 <td>
                                     <select style="width: 250px" id="problema" name="problema" class="imputBR">
                                         <c:forEach var="listaProblemas" items="${listaProblemas}">
-                                            <option <c:if test="${listaProblemas.idProblema==chamado.idProblema.idProblema}">selected</c:if> id="${listaProblemas.idProblema}">${listaProblemas.descricao}</option>
+                                            <option <c:if test="${listaProblemas.idProblema==chamado.idProblema.idProblema}">selected</c:if> value="${listaProblemas.idProblema}">${listaProblemas.descricao}</option>
                                         </c:forEach>
                                     </select>
                                 </td>
@@ -109,7 +109,7 @@
                                 <td>
                                     <select style="width: 250px" id="local" name="local" class="imputBR">
                                         <c:forEach var="listaLocais" items="${listaLocais}">
-                                            <option <c:if test="${listaLocais.idLocal==chamado.idLocal.idLocal}">selected</c:if> id="${listaLocais.idLocal}">${listaLocais.nome}</option>
+                                            <option <c:if test="${listaLocais.idLocal==chamado.idLocal.idLocal}">selected</c:if> value="${listaLocais.idLocal}">${listaLocais.nome}</option>
                                         </c:forEach>
                                     </select>
                                 </td>
@@ -151,7 +151,7 @@
                                     <td>
                                         <select style="width: 250px" id="status" name="status" class="imputBR">
                                             <c:forEach var="listaStatus" items="${listaStatus}">
-                                                <option <c:if test="${listaStatus.idStatusatendimento==chamado.idStatusatendimentoatual.idStatusatendimentoatual}">selected</c:if> id="${listaStatus.idStatusatendimento}">${listaStatus.nome}</option>
+                                                <option <c:if test="${listaStatus.idStatusatendimento==chamado.idStatusatendimentoatual.idStatusatendimentoatual}">selected</c:if> value="${listaStatus.idStatusatendimento}">${listaStatus.nome}</option>
                                             </c:forEach>
                                         </select>
                                     </td>
