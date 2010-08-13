@@ -2,6 +2,7 @@ package org.SGC;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Date;
 import javax.ejb.EJB;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -29,11 +30,21 @@ public class atualizaChamados extends HttpServlet {
         Problema problema = gerenciadorSBC.recuperaProblema(Integer.parseInt(request.getParameter("problema")));
         LocalDepartamento local = gerenciadorSBC.recuperaLocal(Integer.parseInt(request.getParameter("local")));
 
+        Statusatendimento status = new Statusatendimento(1);
         if (alteracao==true){
-            Statusatendimento status = gerenciadorSBC.recuperaStatusAtendimento(Integer.parseInt(request.getParameter("listaStatus")));
+            status = gerenciadorSBC.recuperaStatusAtendimento(Integer.parseInt(request.getParameter("listaStatus")));
         }
 
         Usuario usuario = gerenciadorSBC.recuperaUsuario(Integer.parseInt(request.getParameter("codigoUser")));
+
+        chamado.setIdUsuario(usuario);
+        chamado.setIdArearesponsavel(area);
+        chamado.setIdProblema(problema);
+        chamado.setIdLocal(local);
+        chamado.setIdStatusatendimentoatual(status);
+        chamado.setDescricao(request.getParameter("descricao"));
+        chamado.setDataabertura(new Date());
+        //chamado.setHoraabertura(new Date());
 
         try {
            if(alteracao) {
@@ -42,8 +53,10 @@ public class atualizaChamados extends HttpServlet {
                gerenciadorSBC.insereChamado(chamado);
            }
        } catch (Exception e) {
-
+           request.setAttribute("erro", "Erro: " + e.toString());
        }
+
+       response.sendRedirect("novochamado.jsp");
 
 
     }
