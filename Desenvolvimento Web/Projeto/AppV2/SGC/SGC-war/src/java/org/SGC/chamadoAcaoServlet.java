@@ -20,10 +20,6 @@ public class chamadoAcaoServlet extends HttpServlet {
 
         Chamado chamado = new Chamado();
 
-        //Lista de Status
-        List<Statusatendimento> listaStatus = null;
-        listaStatus = gerenciadorSBC.listarStatusAtendimento();
-
         Integer id = 0;
         if (request.getParameter("idChamado") != null)
         {
@@ -32,7 +28,17 @@ public class chamadoAcaoServlet extends HttpServlet {
                 chamado = gerenciadorSBC.recuperaChamado(id);
         }
 
+        //Lista de Status
+        List<Statusatendimento> listaStatus = null;
+        listaStatus = gerenciadorSBC.listarStatusAtendimento();
+
+        //Lista de ChamadosAcoes
+        List<Chamadoacao> listChamadoAcao = null;
+        listChamadoAcao = gerenciadorSBC.listarChamadoAcoes(chamado);
+
         request.setAttribute("listaStatus", listaStatus);
+        request.setAttribute("listaOcorrencias", listChamadoAcao);
+        request.setAttribute("id", id);
         request.setAttribute("chamado", chamado);
 
         request.getRequestDispatcher("chamados/chamadoacao.jsp").forward(request, response);
