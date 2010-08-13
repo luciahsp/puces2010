@@ -18,7 +18,8 @@ public interface GerenciadorSBCLocal {
 
     //Chamados
     public List<Chamado> listarChamados();
-    public Chamado recuperaChamadoAbertos();
+    public List<Chamado> recuperaChamadoAbertos(Usuario user);
+    public List<Chamado> recuperaChamadoAbertos();
     public Chamado recuperaChamadoEmAtendimento();
     public Chamado recuperaChamadoFechados();
     public Chamado recuperaChamado(int id);
