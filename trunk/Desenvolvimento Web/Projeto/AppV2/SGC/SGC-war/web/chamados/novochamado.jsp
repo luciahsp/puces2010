@@ -69,7 +69,7 @@
             <tr>
                 <td>
 
-                    <form action="" method="post" onsubmit="return valida();">
+                    <form action="atualizaChamados" method="post" onsubmit="return valida();">
 
                         <table border="0" cellpadding="0" cellspacing="0">
                             <tr>
@@ -134,6 +134,7 @@
                                         <c:if test="${sessionScope.login != null}">
                                             ${sessionScope.login.nome}
                                         </c:if>
+                                        <input type="hidden" id="codigoUser" name="codigoUser" value="${sessionScope.login.idUsuario}" class="imputBR" readonly />
                                     </c:if>
                                     <c:if test="${chamado.idUsuario != null}">
                                         ${chamado.idUsuario.nome}
