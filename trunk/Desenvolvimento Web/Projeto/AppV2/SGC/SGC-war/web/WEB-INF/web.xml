@@ -36,6 +36,10 @@
         <servlet-name>listaChamadosAbertosServlet</servlet-name>
         <servlet-class>org.SGC.listaChamadosAbertosServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>chamadoAcaoServlet</servlet-name>
+        <servlet-class>org.SGC.chamadoAcaoServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>loginServlet</servlet-name>
         <url-pattern>/loginServlet</url-pattern>
@@ -71,6 +75,10 @@
     <servlet-mapping>
         <servlet-name>listaChamadosAbertosServlet</servlet-name>
         <url-pattern>/listaChamadosAbertosServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>chamadoAcaoServlet</servlet-name>
+        <url-pattern>/chamadoAcaoServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
