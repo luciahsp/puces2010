@@ -16,6 +16,18 @@
         <servlet-name>ListarUsuarios</servlet-name>
         <servlet-class>org.SGC.ListarUsuarios</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>chamadoServlet</servlet-name>
+        <servlet-class>org.SGC.chamadoServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>atualizaChamados</servlet-name>
+        <servlet-class>org.SGC.atualizaChamados</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>atualizaChamadoAcao</servlet-name>
+        <servlet-class>org.SGC.atualizaChamadoAcao</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>loginServlet</servlet-name>
         <url-pattern>/loginServlet</url-pattern>
@@ -28,9 +40,21 @@
         <servlet-name>usuarioServlet</servlet-name>
         <url-pattern>/usuarioServlet</url-pattern>
     </servlet-mapping>
-	<servlet-mapping>
+    <servlet-mapping>
         <servlet-name>ListarUsuarios</servlet-name>
         <url-pattern>/ListarUsuarios</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>chamadoServlet</servlet-name>
+        <url-pattern>/chamadoServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>atualizaChamados</servlet-name>
+        <url-pattern>/atualizaChamados</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>atualizaChamadoAcao</servlet-name>
+        <url-pattern>/atualizaChamadoAcao</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
