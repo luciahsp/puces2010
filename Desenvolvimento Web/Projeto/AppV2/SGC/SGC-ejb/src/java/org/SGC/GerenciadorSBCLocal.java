@@ -28,7 +28,6 @@ public interface GerenciadorSBCLocal {
 
     //Ação do Chamado
     public List<Chamadoacao> listarChamadoAcoes(Chamado chamado);
-    public void insereChamadoAcao(Chamado chamado);
 
     //Nível de Acesso
     public List<Nivelacesso> listarNiveisDeAcesso();
@@ -61,5 +60,9 @@ public interface GerenciadorSBCLocal {
     public void insereAreaResponsavel(Arearesponsavel area);
 
     public void atualizaChamado(org.SGC.Chamado chamado);
+
+    public void atualizaChamadoAcao(org.SGC.Chamadoacao chamadoacao);
+
+    public void insereChamadoAcao(org.SGC.Chamadoacao chamadoacao);
 
 }

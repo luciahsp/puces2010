@@ -24,8 +24,12 @@ public class GerenciadorSBC implements GerenciadorSBCLocal {
         em.merge(chamado);
     }
 
-    public void insereChamadoAcao(Chamado chamado) {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public void insereChamadoAcao(Chamadoacao chamadoacao) {
+        em.persist(chamadoacao);
+    }
+
+    public void atualizaChamadoAcao(Chamadoacao chamadoacao) {
+        em.merge(chamadoacao);
     }
 
     public void insereLocal(Local local) {
@@ -62,7 +66,8 @@ public class GerenciadorSBC implements GerenciadorSBCLocal {
     }
 
     public List<Chamadoacao> listarChamadoAcoes(Chamado chamado) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        Query q = em.createQuery("SELECT c FROM Chamadoacao c WHERE c.idChamado.idChamado = " + chamado.getIdChamado());
+        return q.getResultList();
     }
 
     public List<Chamado> listarChamados() {
