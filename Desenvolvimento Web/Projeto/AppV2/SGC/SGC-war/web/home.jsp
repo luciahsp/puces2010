@@ -64,13 +64,8 @@
                                                 <tr class="textoCZA_12B" height="20px">
                                                     <td width="10px"></td>
                                                     <td width="100px" align="left">Usuário:</td>
-                                                    <td align="left">dfhjdshfjkds</td>
-                                                </tr>
-                                                <tr class="textoCZA_12B" height="20px">
-                                                    <td width="10px" ></td>
-                                                    <td align="left">Ultimo Acesso:</td>
-                                                    <td align="left">dsjfjksdf</td>
-                                                </tr>
+                                                    <td align="left"><c:if test="${sessionScope.login != null}"> ${sessionScope.login.nome} </c:if></td>
+                                                </tr>                                                
                                             </table>
 
                                         </td>
