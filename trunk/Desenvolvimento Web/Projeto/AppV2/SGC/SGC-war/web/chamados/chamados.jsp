@@ -1,4 +1,6 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt" %>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
    "http://www.w3.org/TR/html4/loose.dtd">
@@ -68,7 +70,7 @@
                                 <td width="10px" ></td>
                                 <td>
 
-                                    Quantidade de itens encontrados: 2
+                                    Quantidade de itens encontrados: ${totalUsuario}
 
                                 </td>
                             </tr>
@@ -87,20 +89,18 @@
                                             <td width="100px">Data Abertura</td>
                                             <td width="100px">Status</td>
                                             <td width="100px">Editar</td>
-                                            <td width="100px">Visualizar</td>
                                         </tr>
                                         
-                                        <c:forEach var="lista" items="${listaNivel}">
+                                        <c:forEach var="lista" items="${listaUsuario}">
                                              <tr class="textoCZA_12" bgcolor="#ffffff">
-                                                <td>Nome</td>
-                                                <td>Departamento</td>
-                                                <td>Area</td>
-                                                <td>Problema</td>
-                                                <td>Descricao</td>
-                                                <td>Data</td>
-                                                <td>Status</td>
-                                                <td width="100px">&nbsp;<a href="novochamado.jsp" class="textoLnkMenu_12B">Editar</a></td>
-                                                <td width="100px">&nbsp;<a href="detalheschamado.jsp" class="textoLnkMenu_12B">Detalhes</a></td>
+                                                <td>${lista.idUsuario.nome}</td>
+                                                <td>${lista.idLocal.nome}</td>
+                                                <td>${lista.idArearesponsavel.nome}</td>
+                                                <td>${lista.idProblema.descricao}</td>
+                                                <td>${lista.descricao}</td>
+                                                <td>${lista.dataabertura}</td>
+                                                <td>${lista.idStatusatendimentoatual.nome}</td>
+                                                <td width="100px">&nbsp;<a href="chamadoServlet?idChamado=${lista.idChamado}" class="textoLnkMenu_12B">Editar</a></td>
                                             </tr>
                                         </c:forEach>
 
@@ -145,7 +145,7 @@
                                 <td width="10px" ></td>
                                 <td>
 
-                                    Quantidade de itens encontrados: 2
+                                    Quantidade de itens encontrados: ${totalTodos}
 
                                 </td>
                             </tr>
@@ -164,20 +164,21 @@
                                             <td width="100px">Data Abertura</td>
                                             <td width="100px">Status</td>
                                             <td width="100px">Editar</td>
-                                            <td width="100px">Visualizar</td>
                                         </tr>
 
-                                        <tr class="textoCZA_12" bgcolor="#ffffff">
-                                            <td>Nome</td>
-                                            <td>Departamento</td>
-                                            <td>Area</td>
-                                            <td>Problema</td>
-                                            <td>Descricao</td>
-                                            <td>Data</td>
-                                            <td>Status</td>
-                                            <td width="100px">&nbsp;<a href="novochamado.jsp" class="textoLnkMenu_12B">Editar</a></td>
-                                            <td width="100px">&nbsp;<a href="detalheschamado.jsp" class="textoLnkMenu_12B">Detalhes</a></td>
-                                        </tr>
+                                        <c:forEach var="lista" items="${listaTodos}">
+                                             <tr class="textoCZA_12" bgcolor="#ffffff">
+                                                <td>${lista.idUsuario.nome}</td>
+                                                <td>${lista.idLocal.nome}</td>
+                                                <td>${lista.idArearesponsavel.nome}</td>
+                                                <td>${lista.idProblema.descricao}</td>
+                                                <td>${lista.descricao}</td>
+                                                <td>${lista.dataabertura}</td>
+                                                <td>${lista.idStatusatendimentoatual.nome}</td>
+                                                <td width="100px">&nbsp;<a href="chamadoServlet?idChamado=${lista.idChamado}" class="textoLnkMenu_12B">Editar</a></td>
+                                            </tr>
+                                        </c:forEach>
+
                                         </table>
 
 
