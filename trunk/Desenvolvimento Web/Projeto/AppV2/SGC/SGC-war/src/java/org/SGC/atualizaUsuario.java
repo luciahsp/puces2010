@@ -43,7 +43,9 @@ public class atualizaUsuario extends HttpServlet {
        } catch (Exception e) {
            
        }
-       
-       response.sendRedirect("adm/consultarusuarios.jsp");
+
+       response.sendRedirect("ListarUsuarios");
+       //response.sendRedirect("adm/consultarusuarios.jsp");
+       //request.getRequestDispatcher("/ListarUsuarios").forward(request, response);
     }
 }
