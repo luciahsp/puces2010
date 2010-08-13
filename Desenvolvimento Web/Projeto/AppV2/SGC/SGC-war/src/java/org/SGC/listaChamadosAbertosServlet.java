@@ -22,6 +22,8 @@ public class listaChamadosAbertosServlet extends HttpServlet {
 
         request.setAttribute("listaUsuario", listaChamadosUsuario);
         request.setAttribute("listaTodos", listaChamadosPendentes);
+        request.setAttribute("totalUsuario",listaChamadosUsuario.size());
+        request.setAttribute("totalTodos",listaChamadosPendentes.size());
 
         request.getRequestDispatcher("chamados/chamados.jsp").forward(request, response);
     } 
