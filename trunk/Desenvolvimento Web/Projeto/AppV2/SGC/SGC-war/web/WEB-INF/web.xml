@@ -28,6 +28,14 @@
         <servlet-name>atualizaChamadoAcao</servlet-name>
         <servlet-class>org.SGC.atualizaChamadoAcao</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>atualizaUsuario</servlet-name>
+        <servlet-class>org.SGC.atualizaUsuario</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>listaChamadosAbertosServlet</servlet-name>
+        <servlet-class>org.SGC.listaChamadosAbertosServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>loginServlet</servlet-name>
         <url-pattern>/loginServlet</url-pattern>
@@ -55,6 +63,14 @@
     <servlet-mapping>
         <servlet-name>atualizaChamadoAcao</servlet-name>
         <url-pattern>/atualizaChamadoAcao</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>atualizaUsuario</servlet-name>
+        <url-pattern>/atualizaUsuario</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>listaChamadosAbertosServlet</servlet-name>
+        <url-pattern>/listaChamadosAbertosServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
