@@ -19,7 +19,7 @@
                 <td height="31" width="100%" background="_imagens/Barra01_02.gif">
                     <span class="tituloBarra">Administração</span>
                 </td>
-                <td height="31" width="5" background="_imagens/Barra01_02.gif"><img src="../_imagens/Barra01_02.gif" border="0" runat="server" id="img2"></td>
+                <td height="31" width="5" background="_imagens/Barra01_02.gif"><img src="/_imagens/Barra01_02.gif" border="0" runat="server" id="img2"></td>
             </tr>
         </table>
 
