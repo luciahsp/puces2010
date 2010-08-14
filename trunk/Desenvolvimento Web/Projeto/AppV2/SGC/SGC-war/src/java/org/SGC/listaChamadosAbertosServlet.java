@@ -23,12 +23,10 @@ public class listaChamadosAbertosServlet extends HttpServlet {
         
         if(user.getIdNivelacesso().getPermiteeditar()==1) {
             listaChamadosUsuario = gerenciadorSBC.recuperaChamadoAbertos(user);
-            //listaChamadosPendentes = gerenciadorSBC.recuperaChamadoAbertos();
-            listaChamadosPendentes = gerenciadorSBC.recuperaChamadoAbertos(user.getIdUsuario());
+            listaChamadosPendentes = gerenciadorSBC.recuperaChamadoAbertosPendente(user);
         } else {
             listaChamadosUsuario = gerenciadorSBC.recuperaChamadoAbertosOperador(user);
-            //listaChamadosPendentes = gerenciadorSBC.recuperaChamadoAbertosOperadorPendente(user);
-            listaChamadosPendentes = gerenciadorSBC.recuperaChamadoAbertos(user.getIdUsuario());
+            listaChamadosPendentes = gerenciadorSBC.recuperaChamadoAbertosOperadorPendente(user);
         }
 
         request.setAttribute("listaUsuario", listaChamadosUsuario);
