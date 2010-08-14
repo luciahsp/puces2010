@@ -111,6 +111,8 @@
         </table>
         <!-- FIM - Critérios de Pesquisa -->
 
+        <c:if test="${totalUsuario != null}">
+
         <!-- INICIO - Resultado Pesquisa -->
         <br>
         <table width="95%" align="center" border=1 cellpadding="0" cellspacing="0" bordercolor="#ffffff" bgcolor="#ededed">
@@ -185,6 +187,7 @@
             </tr>
         </table>
         <!-- FIM - Resultado Pesquisa -->
+        </c:if>
 
     </body>
 </html>
