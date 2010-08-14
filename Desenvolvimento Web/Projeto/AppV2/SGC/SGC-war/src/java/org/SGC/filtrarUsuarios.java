@@ -16,24 +16,23 @@ public class filtrarUsuarios extends HttpServlet {
    
     @EJB
     private GerenciadorSBCLocal gerenciadorSBC;
-    
-    @Override
-   protected void doPost(HttpServletRequest request, HttpServletResponse response)
-    throws ServletException, IOException {
 
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+    throws ServletException, IOException {
         String nomePesquisa = "";
 
-        if(request.getParameter("nome") == null ? "" != null : !request.getParameter("nome").equals(""));
+        if(request.getParameter("nome") != null);
         {
             nomePesquisa = request.getParameter("nome");
-            
-            List<Usuario> lista = gerenciadorSBC.listarUsuarios(nomePesquisa);
+
+            List<Usuario> lista = null;
+
+            lista = gerenciadorSBC.listarUsuarios();
             request.setAttribute("lista", lista);
             request.setAttribute("Contador",lista.size());
             request.getRequestDispatcher("adm/consultarusuarios.jsp").forward(request, response);
-            
         }
     }
-
-
+  
 }
