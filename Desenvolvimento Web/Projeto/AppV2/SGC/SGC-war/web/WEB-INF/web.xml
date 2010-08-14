@@ -41,6 +41,14 @@
         <servlet-class>org.SGC.chamadoAcaoServlet</servlet-class>
     </servlet>
     <servlet>
+        <servlet-name>chamadoConsulta</servlet-name>
+        <servlet-class>org.SGC.chamadoConsulta</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>chamadoLista</servlet-name>
+        <servlet-class>org.SGC.chamadoLista</servlet-class>
+    </servlet>
+    <servlet>
         <servlet-name>filtrarUsuarios</servlet-name>
         <servlet-class>org.SGC.filtrarUsuarios</servlet-class>
     </servlet>
@@ -83,6 +91,14 @@
     <servlet-mapping>
         <servlet-name>chamadoAcaoServlet</servlet-name>
         <url-pattern>/chamadoAcaoServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>chamadoConsulta</servlet-name>
+        <url-pattern>/chamadoConsulta</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>chamadoLista</servlet-name>
+        <url-pattern>/chamadoLista</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>filtrarUsuarios</servlet-name>
