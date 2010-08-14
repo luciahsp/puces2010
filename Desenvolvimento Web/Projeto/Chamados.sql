@@ -158,7 +158,7 @@ primary key(ID_HistoricoAcesso)
 );
 
 
-ALTER TABLE Chamado ADD COLUMN ID_UsuarioResponsavel integer CONSTRAINT FK_IDUsuarioChamado References Usuario on Delete Cascade on Update Restrict;
+ALTER TABLE Chamado ADD COLUMN ID_UsuarioResponsavel integer CONSTRAINT FK_IDUsuarioResponsavelChamado References Usuario on Delete Cascade on Update Restrict;
 
 
 
