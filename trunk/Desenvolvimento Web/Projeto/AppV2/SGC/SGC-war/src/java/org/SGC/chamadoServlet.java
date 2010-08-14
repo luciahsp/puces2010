@@ -36,6 +36,10 @@ public class chamadoServlet extends HttpServlet {
         List<Statusatendimento> listaStatus = null;
         listaStatus = gerenciadorSBC.listarStatusAtendimento();
 
+        //Lista de Usuarios
+        List<Usuario> listaUsuarios = null;
+        listaUsuarios = gerenciadorSBC.listarUsuarios();
+
         Integer id = 0;
         if (request.getParameter("idChamado") != null)
         {
@@ -48,6 +52,7 @@ public class chamadoServlet extends HttpServlet {
         request.setAttribute("listaProblemas", listaProblemas);
         request.setAttribute("listaLocais", listaLocais);
         request.setAttribute("listaStatus", listaStatus);
+        request.setAttribute("listaUsuarios", listaUsuarios);
         request.setAttribute("id", id);
         request.setAttribute("chamado", chamado);
 

@@ -35,6 +35,11 @@ public class atualizaChamados extends HttpServlet {
             status = gerenciadorSBC.recuperaStatusAtendimento(Integer.parseInt(request.getParameter("status")));
         }
 
+        Usuario usuarioResp = null;
+        if (Integer.parseInt(request.getParameter("userResp")) != 0){
+            usuarioResp = gerenciadorSBC.recuperaUsuario(Integer.parseInt(request.getParameter("userResp")));
+        }
+
         Usuario usuario = gerenciadorSBC.recuperaUsuario(Integer.parseInt(request.getParameter("codigoUser")));
 
         chamado.setIdUsuario(usuario);
@@ -45,6 +50,10 @@ public class atualizaChamados extends HttpServlet {
         chamado.setDescricao(request.getParameter("descricao"));
         chamado.setDataabertura(new Date());
         chamado.setHoraabertura(new Date());
+
+        if (Integer.parseInt(request.getParameter("userResp")) != 0){
+            chamado.setIdUsuarioResponsavel(usuarioResp);
+        }
 
         try {
            if(alteracao) {

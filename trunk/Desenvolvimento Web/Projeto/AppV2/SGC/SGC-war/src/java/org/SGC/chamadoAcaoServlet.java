@@ -36,8 +36,13 @@ public class chamadoAcaoServlet extends HttpServlet {
         List<Chamadoacao> listChamadoAcao = null;
         listChamadoAcao = gerenciadorSBC.listarChamadoAcoes(chamado);
 
+        //Lista de Usuarios
+        List<Usuario> listaUsuarios = null;
+        listaUsuarios = gerenciadorSBC.listarUsuarios();
+
         request.setAttribute("listaStatus", listaStatus);
         request.setAttribute("listaOcorrencias", listChamadoAcao);
+        request.setAttribute("listaUsuarios", listaUsuarios);
         request.setAttribute("id", id);
         request.setAttribute("chamado", chamado);
 
