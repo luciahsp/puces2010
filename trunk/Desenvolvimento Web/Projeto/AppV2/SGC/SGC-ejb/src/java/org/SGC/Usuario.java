@@ -61,6 +61,9 @@ public class Usuario implements Serializable {
     private List<Chamadoacao> chamadoacaoList;
     @OneToMany(mappedBy = "idUsuario")
     private List<Chamado> chamadoList;
+    @OneToMany(mappedBy = "idUsuarioResponsavel")
+    private List<Chamado> chamadoListResp;
+
 
     public Usuario() {
     }
@@ -147,6 +150,14 @@ public class Usuario implements Serializable {
 
     public void setChamadoList(List<Chamado> chamadoList) {
         this.chamadoList = chamadoList;
+    }
+
+    public List<Chamado> getChamadoListResp() {
+        return chamadoListResp;
+    }
+
+    public void setChamadoListResp(List<Chamado> chamadoList) {
+        this.chamadoListResp = chamadoList;
     }
 
     @Override
