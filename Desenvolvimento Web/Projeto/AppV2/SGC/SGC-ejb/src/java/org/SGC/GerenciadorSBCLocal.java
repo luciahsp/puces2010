@@ -21,6 +21,7 @@ public interface GerenciadorSBCLocal {
     public List<Chamado> listarChamados();
     public List<Chamado> recuperaChamadoAbertos(Usuario user);
     public List<Chamado> recuperaChamadoAbertos();
+    public List<Chamado> recuperaChamadoAbertosPendente(Usuario user);
     public Chamado recuperaChamadoEmAtendimento();
     public Chamado recuperaChamadoFechados();
     public Chamado recuperaChamado(int id);
@@ -79,8 +80,6 @@ public interface GerenciadorSBCLocal {
     public void insereHistoricoAcesso(Historicoacesso historico);
 
     public java.util.List<org.SGC.Chamado> listarChamadosConsulta(java.lang.Integer idStatus, java.lang.String descricao);
-
-    public java.util.List<org.SGC.Chamado> recuperaChamadoAbertos(Integer id);
 
     public java.util.List<org.SGC.Usuario> listarUsuariosConsulta(java.lang.String nome);
 

@@ -176,13 +176,7 @@ public class GerenciadorSBC implements GerenciadorSBCLocal {
     }
 
     public List<Chamado> recuperaChamadoAbertos() {
-         Query q = em.createQuery("SELECT c FROM Chamado c WHERE  c.datafechamento is null AND c.idUsuarioResponsavel is null");
-         return q.getResultList();
-    }
-
-    public List<Chamado> recuperaChamadoAbertos(Integer id) {
-         //Query q = em.createQuery("SELECT c FROM Chamado c WHERE c.datafechamento is null AND c.idUsuarioResponsavel.idUsuario <> " + id.toString());
-        Query q = em.createQuery("SELECT c FROM Chamado c WHERE c.datafechamento is null");
+         Query q = em.createQuery("SELECT c FROM Chamado c WHERE  c.datafechamento is null");
          return q.getResultList();
     }
 
@@ -191,13 +185,18 @@ public class GerenciadorSBC implements GerenciadorSBCLocal {
          return q.getResultList();
     }   
 
+    public List<Chamado> recuperaChamadoAbertosPendente(Usuario user) {
+         Query q = em.createQuery("SELECT c FROM Chamado c WHERE c.datafechamento is null");
+         return q.getResultList();
+    }
+
     public List<Chamado> recuperaChamadoAbertosOperador(Usuario user) {
-         Query q = em.createQuery("SELECT c FROM Chamado c WHERE c.datafechamento is null AND c.idUsuarioResponsavel.idUsuario > 0 AND c.idUsuario.idUsuario = " + user.getIdUsuario());
+         Query q = em.createQuery("SELECT c FROM Chamado c WHERE c.datafechamento is null AND c.idUsuario.idUsuario = " + user.getIdUsuario());
          return q.getResultList();
     }
 
     public List<Chamado> recuperaChamadoAbertosOperadorPendente(Usuario user) {
-         Query q = em.createQuery("SELECT c FROM Chamado c WHERE c.datafechamento is null AND c.idUsuarioResponsavel is null AND c.idUsuario.idUsuario = " + user.getIdUsuario());
+         Query q = em.createQuery("SELECT c FROM Chamado c WHERE c.datafechamento is null AND c.idUsuario.idUsuario = " + user.getIdUsuario());
          return q.getResultList();
     }
 
