@@ -37,7 +37,8 @@ public class chamadoLista extends HttpServlet {
 
         //Lista de Chamados
         List<Chamado> listaChamados = null;
-        listaChamados = gerenciadorSBC.listarChamados();
+        //listaChamados = gerenciadorSBC.listarChamados();
+        listaChamados = gerenciadorSBC.listarChamadosConsulta(idStatus, descricao);
 
         //Lista de Status
         List<Statusatendimento> listaStatus = null;
@@ -46,6 +47,8 @@ public class chamadoLista extends HttpServlet {
         request.setAttribute("listaChamados", listaChamados);
         request.setAttribute("totalUsuario", listaChamados.size());
         request.setAttribute("listaStatus", listaStatus);
+        request.setAttribute("desc", descricao);
+        request.setAttribute("idSt", idStatus);
 
         request.getRequestDispatcher("chamados/consultar.jsp").forward(request, response);
 
