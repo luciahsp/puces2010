@@ -158,6 +158,12 @@ public class GerenciadorSBC implements GerenciadorSBCLocal {
          return q.getResultList();
     }
 
+    public List<Chamado> recuperaChamadoAbertos(Integer id) {
+         //Query q = em.createQuery("SELECT c FROM Chamado c WHERE c.datafechamento is null AND c.idUsuarioResponsavel.idUsuario <> " + id.toString());
+        Query q = em.createQuery("SELECT c FROM Chamado c WHERE c.datafechamento is null");
+         return q.getResultList();
+    }
+
     public List<Chamado> recuperaChamadoAbertos(Usuario user) {
          Query q = em.createQuery("SELECT c FROM Chamado c WHERE c.datafechamento is null AND c.idUsuarioResponsavel.idUsuario = " + user.getIdUsuario());
          return q.getResultList();

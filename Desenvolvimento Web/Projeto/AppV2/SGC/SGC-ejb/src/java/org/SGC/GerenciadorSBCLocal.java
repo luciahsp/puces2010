@@ -80,4 +80,6 @@ public interface GerenciadorSBCLocal {
 
     public java.util.List<org.SGC.Chamado> listarChamadosConsulta(java.lang.Integer idStatus, java.lang.String descricao);
 
+    public java.util.List<org.SGC.Chamado> recuperaChamadoAbertos(Integer id);
+
 }
