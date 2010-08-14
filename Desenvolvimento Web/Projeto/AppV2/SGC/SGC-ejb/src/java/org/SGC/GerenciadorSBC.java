@@ -130,6 +130,28 @@ public class GerenciadorSBC implements GerenciadorSBCLocal {
     public List<Unidade> listarUnidades() {
         throw new UnsupportedOperationException("Not supported yet.");
     }
+    public List<Usuario> listarUsuariosConsulta(String nome) {
+
+        String query = "";
+
+        if (!nome.equals(""))
+        {
+            query = "u.nome LIKE '%" + nome + "%'";
+        }
+
+        Query q = null;
+
+        if (query.equals(""))
+        {
+            q = em.createQuery("SELECT u FROM Usuario u");
+        }
+        else
+        {
+            q = em.createQuery("SELECT u FROM Usuario u WHERE " + query);
+        }
+
+        return q.getResultList();
+    }
 
     public List<Usuario> listarUsuarios() {
          Query q = em.createQuery("SELECT u FROM Usuario u");
