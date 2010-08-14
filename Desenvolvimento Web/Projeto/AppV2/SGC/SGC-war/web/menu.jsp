@@ -1,4 +1,4 @@
-
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
    "http://www.w3.org/TR/html4/loose.dtd">
@@ -69,16 +69,18 @@
                             <td>Administração</td>
                         </tr>
                     </table>
-                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                        <tr>
-                            <td width="12" align="left" height="15px"><img src="_imagens/Seta2.jpg"></td>
-                            <td width="491" align="left" height="15px">&nbsp;&nbsp;<a href="usuarioServlet" target="fraBody" class="textoLnkMenu_12B">Cadastrar Usuário</a></td>
-                        </tr>
-                        <tr>
-                            <td align="left"><img src="_imagens/Seta2.jpg"></td>
-                            <td align="left">&nbsp;&nbsp;<a href="ListarUsuarios" target="fraBody" class="textoLnkMenu_12B">Consultar Usuários</a></td>
-                        </tr>
-                    </table>
+                    <c:if test="${sessionScope.login.idNivelacesso.permiteeditar == 1}">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td width="12" align="left" height="15px"><img src="_imagens/Seta2.jpg"></td>
+                                <td width="491" align="left" height="15px">&nbsp;&nbsp;<a href="usuarioServlet" target="fraBody" class="textoLnkMenu_12B">Cadastrar Usuário</a></td>
+                            </tr>
+                            <tr>
+                                <td align="left"><img src="_imagens/Seta2.jpg"></td>
+                                <td align="left">&nbsp;&nbsp;<a href="ListarUsuarios" target="fraBody" class="textoLnkMenu_12B">Consultar Usuários</a></td>
+                            </tr>
+                        </table>
+                    </c:if>
                     <br>
 
                     <table width="100%" class="accordionHeader">
