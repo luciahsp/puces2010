@@ -71,7 +71,8 @@ public class GerenciadorSBC implements GerenciadorSBCLocal {
     }
 
     public List<Chamado> listarChamados() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        Query q = em.createQuery("SELECT c FROM Chamado c");
+        return q.getResultList();
     }
 
     public List<LocalDepartamento> listarLocais() {
