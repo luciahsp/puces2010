@@ -1,0 +1,21 @@
+create table TipoAcesso
+(
+ID_TipoAcesso integer NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1),
+Descricao varchar(1000),
+Nome varchar(1000),
+primary key(ID_TipoAcesso)
+) ;
+
+
+create table HistoricoAcesso
+(
+ID_HistoricoAcesso integer NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1),
+ID_Usuario integer CONSTRAINT FK_IDUsuarioHistorico References Usuario on Delete Cascade on Update Restrict,
+ID_TipoAcesso integer CONSTRAINT FK_IDTipoAcessoHistorico References TipoAcesso on Delete Cascade on Update Restrict,
+Data Date,
+Hora Time,
+primary key(ID_HistoricoAcesso)
+);
+
+
+ALTER TABLE Chamado ADD COLUMN ID_UsuarioResponsavel integer CONSTRAINT FK_IDUsuarioChamado References Usuario on Delete Cascade on Update Restrict;
