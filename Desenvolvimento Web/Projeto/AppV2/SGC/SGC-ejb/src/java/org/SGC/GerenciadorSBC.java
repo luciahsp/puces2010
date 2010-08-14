@@ -121,12 +121,12 @@ public class GerenciadorSBC implements GerenciadorSBCLocal {
     }
 
     public List<Chamado> recuperaChamadoAbertos() {
-         Query q = em.createQuery("SELECT c FROM Chamado c WHERE  c.datafechamento is null");
+         Query q = em.createQuery("SELECT c FROM Chamado c WHERE  c.datafechamento is null AND c.idUsuarioResponsavel is null");
          return q.getResultList();
     }
 
     public List<Chamado> recuperaChamadoAbertos(Usuario user) {
-         Query q = em.createQuery("SELECT c FROM Chamado c WHERE c.datafechamento is null AND c.idUsuario.idUsuario = " + user.getIdUsuario());
+         Query q = em.createQuery("SELECT c FROM Chamado c WHERE c.datafechamento is null AND c.idUsuarioResponsavel.idUsuario = " + user.getIdUsuario());
          return q.getResultList();
     }   
 
@@ -177,5 +177,41 @@ public class GerenciadorSBC implements GerenciadorSBCLocal {
         Usuario u = new Usuario();
         u = (Usuario) em.createNamedQuery("Usuario.findByIdUsuario").setParameter("idUsuario", id).getSingleResult();
         return u;
+    }
+
+    //Tipo de Acesso
+    public List<Tipoacesso> listarTipoAcessos() {
+        Query q = em.createQuery("SELECT t FROM Tipoacesso t");
+        return q.getResultList();
+    }
+
+    public Tipoacesso recuperaTipoAcesso(int id) {
+        Tipoacesso t = new Tipoacesso();
+        t = (Tipoacesso) em.createNamedQuery("Tipoacesso.findByIdTipoacesso").setParameter("idTipoacesso", id).getSingleResult();
+        return t;
+    }
+    public void insereTipoAcesso(Tipoacesso tipo) {
+        em.persist(tipo);
+    }
+
+    //Historico de Acesso
+    public List<Historicoacesso> listarHistoricoAcessos(){
+        Query q = em.createQuery("SELECT h FROM Historicoacesso h");
+        return q.getResultList();
+    }
+
+    public Historicoacesso recuperaHistoricoAcesso(int id){
+        Historicoacesso h = new Historicoacesso();
+        h = (Historicoacesso) em.createNamedQuery("Historicoacesso.findByIdHistoricoacesso").setParameter("idHistoricoacesso", id).getSingleResult();
+        return h;
+    }
+
+    public List<Historicoacesso> recuperaHistoricoAcessoUsuario(Usuario user){
+        Query q = em.createQuery("SELECT h FROM Historicoacesso h WHERE h.idUsuario.idUsuario = " + user.getIdUsuario());
+        return q.getResultList();
+    }
+
+    public void insereHistoricoAcesso(Historicoacesso historico){
+       em.persist(historico);
     }
 }

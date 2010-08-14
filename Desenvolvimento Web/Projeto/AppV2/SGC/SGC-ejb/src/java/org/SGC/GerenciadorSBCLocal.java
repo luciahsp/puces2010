@@ -65,4 +65,15 @@ public interface GerenciadorSBCLocal {
 
     public void insereChamadoAcao(org.SGC.Chamadoacao chamadoacao);
 
+    //Tipo de Acesso
+    public List<Tipoacesso> listarTipoAcessos();
+    public Tipoacesso recuperaTipoAcesso(int id);
+    public void insereTipoAcesso(Tipoacesso tipo);
+
+    //Historico de Acesso
+    public List<Historicoacesso> listarHistoricoAcessos();
+    public Historicoacesso recuperaHistoricoAcesso(int id);
+    public List<Historicoacesso> recuperaHistoricoAcessoUsuario(Usuario user);
+    public void insereHistoricoAcesso(Historicoacesso historico);
+
 }

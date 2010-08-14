@@ -78,6 +78,10 @@ public class Chamado implements Serializable {
     @JoinColumn(name = "ID_USUARIO", referencedColumnName = "ID_USUARIO")
     @ManyToOne
     private Usuario idUsuario;
+    @JoinColumn(name = "ID_USUARIORESPONSAVEL", referencedColumnName = "ID_USUARIO")
+    @ManyToOne
+    private Usuario idUsuarioResponsavel;
+    
 
     public Chamado() {
     }
@@ -190,6 +194,15 @@ public class Chamado implements Serializable {
         this.idUsuario = idUsuario;
     }
 
+    public Usuario getIdUsuarioResponsavel() {
+        return idUsuarioResponsavel;
+    }
+
+    public void setIdUsuarioResponsavel(Usuario idUsuario) {
+        this.idUsuarioResponsavel = idUsuario;
+    }
+
+    
     @Override
     public int hashCode() {
         int hash = 0;
