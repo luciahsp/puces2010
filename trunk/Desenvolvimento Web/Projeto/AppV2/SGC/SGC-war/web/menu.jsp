@@ -59,7 +59,7 @@
                         </tr>
                         <tr>
                             <td align="left"><img src="_imagens/Seta2.jpg"></td>
-                            <td align="left">&nbsp;&nbsp;<a href="chamados/consultar.jsp" target="fraBody" class="textoLnkMenu_12B">Consultar Chamados</a></td>
+                            <td align="left">&nbsp;&nbsp;<a href="chamadoConsulta" target="fraBody" class="textoLnkMenu_12B">Consultar Chamados</a></td>
                         </tr>
                     </table>
                     <br>
