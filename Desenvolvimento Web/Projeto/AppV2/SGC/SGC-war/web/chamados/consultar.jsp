@@ -70,7 +70,7 @@
                                 <td width="10px" ></td>
                                 <td width="150px">Descrição:</td>
                                 <td>
-                                    <input type="text" id="descricao" name="descricao" class="imputBR" size="50" maxlength="50" />
+                                    <input type="text" id="descricao" name="descricao" value="${desc}" class="imputBR" size="50" maxlength="50" />
                                 </td>
                             </tr>
                             <tr class="textoCZA_12B" height="25px">
@@ -80,7 +80,7 @@
                                     <select style="width: 250px" id="status" name="status" class="imputBR">
                                         <option value="0"> -- Selecione -- </option>
                                         <c:forEach var="listaStatus" items="${listaStatus}">
-                                            <option value="${listaStatus.idStatusatendimento}">${listaStatus.nome}</option>
+                                            <option <c:if test="${listaStatus.idStatusatendimento==idSt}">selected</c:if> value="${listaStatus.idStatusatendimento}">${listaStatus.nome}</option>
                                         </c:forEach>
                                     </select>
                                 </td>
