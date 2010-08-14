@@ -82,6 +82,7 @@
                         </table>
                     </c:if>
                     <br>
+                    <!--
 
                     <table width="100%" class="accordionHeader">
                         <tr >
@@ -93,14 +94,18 @@
                             <td width="12" align="left" height="15px"><img src="_imagens/Seta2.jpg"></td>
                             <td width="491" align="left" height="15px">&nbsp;&nbsp;<a href="historico/autenticacao.jsp" target="fraBody" class="textoLnkMenu_12B">Consultar Autenticações</a></td>
                         </tr>
-                        <!--
+                        <!
                         <tr>
                             <td align="left"><img src="_imagens/Seta2.jpg"></td>
                             <td align="left">&nbsp;&nbsp;<a href="historico/atividades.jsp" target="fraBody" class="textoLnkMenu_12B">Consultar Atividades Realizadas</a></td>
                         </tr>
-                        -->
+
+
                     </table>
                     <br>
+                    -->
+                    
+
 
                 </td>
             </tr>
