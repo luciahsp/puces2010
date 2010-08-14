@@ -40,6 +40,10 @@
         <servlet-name>chamadoAcaoServlet</servlet-name>
         <servlet-class>org.SGC.chamadoAcaoServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>filtrarUsuarios</servlet-name>
+        <servlet-class>org.SGC.filtrarUsuarios</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>loginServlet</servlet-name>
         <url-pattern>/loginServlet</url-pattern>
@@ -79,6 +83,10 @@
     <servlet-mapping>
         <servlet-name>chamadoAcaoServlet</servlet-name>
         <url-pattern>/chamadoAcaoServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>filtrarUsuarios</servlet-name>
+        <url-pattern>/filtrarUsuarios</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
