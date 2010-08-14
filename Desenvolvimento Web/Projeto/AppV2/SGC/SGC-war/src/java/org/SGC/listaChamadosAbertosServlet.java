@@ -17,8 +17,17 @@ public class listaChamadosAbertosServlet extends HttpServlet {
     throws ServletException, IOException {
 
         Usuario user = (Usuario) request.getSession().getAttribute("login");
-        List<Chamado>listaChamadosUsuario = gerenciadorSBC.recuperaChamadoAbertos(user);
-        List<Chamado>listaChamadosPendentes = gerenciadorSBC.recuperaChamadoAbertos();
+
+        List<Chamado>listaChamadosUsuario = null;
+        List<Chamado>listaChamadosPendentes = null;
+        
+        if(user.getIdNivelacesso().getPermiteeditar()==1) {
+            listaChamadosUsuario = gerenciadorSBC.recuperaChamadoAbertos(user);
+            listaChamadosPendentes = gerenciadorSBC.recuperaChamadoAbertos();
+        } else {
+            listaChamadosUsuario = gerenciadorSBC.recuperaChamadoAbertosOperador(user);
+            listaChamadosPendentes = gerenciadorSBC.recuperaChamadoAbertosOperadorPendente(user);
+        }
 
         request.setAttribute("listaUsuario", listaChamadosUsuario);
         request.setAttribute("listaTodos", listaChamadosPendentes);
