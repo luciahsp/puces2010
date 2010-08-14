@@ -70,7 +70,7 @@
                             <tr class="textoCZA_12B" height="20px" id="tdNome" runat="server">
                                 <td width="10px" ></td>
                                 <td width="80px">Nome:</td>
-                                <td><input type="text" id="nome" name="nome" value="" class="imputBR"  /></td>
+                                <td><input type="text" id="nome" value="${nom}" name="nome" value="" class="imputBR"  /></td>
                             </tr>
                             
                         </table>
@@ -98,6 +98,7 @@
         </table>
         <!-- FIM - Critérios de Pesquisa -->
 
+        <c:if test="${totalUsuario != null}">
         <!-- INICIO - Resultado Pesquisa -->
         <br>
         <table width="95%" align="center" border=1 cellpadding="0" cellspacing="0" bordercolor="#ffffff" bgcolor="#ededed">
@@ -123,7 +124,7 @@
                             <tr class="textoCZA_12B" height="20px" id="tdCodigo" runat="server">
                                 <td width="10px" ></td>
                                 <td>
-                                    Quantidade de itens encontrados: ${Contador}
+                                    Quantidade de itens encontrados: ${totalUsuario}
                                 </td>
                             </tr>
                             <tr class="textoCZA_12B" height="20px" id="tdCodigo" runat="server">
@@ -134,18 +135,20 @@
                                     	    <table width="95%" border="1" align="center" cellpadding="0" cellspacing="0"  >
                                                 <tr class="textoBR_12B" bgcolor="#6fa5d4">
                                                     <td width="100px" height="20px">&nbsp;Nome</td>
-                                                    <td width="100px">&nbsp;Ramal</td>
-                                                    <td width="100px">&nbsp;e-mail</td>
-                                                    <td width="30px">&nbsp;Tipo</td>
+                                                    
+                                                    <td width="200px">&nbsp;E-mail</td>
+                                                    <td width="100px">&nbsp;Tipo Usuário</td>
+                                                    <td width="100px">&nbsp;Tipo</td>
                                                     <td width="100px">&nbsp;Editar</td>
                                                 </tr>
 
-                                                <c:forEach var="usuario" items="${lista}" varStatus="rowCounter">
+                                                <c:forEach var="usuario" items="${listaUsuarios}" varStatus="rowCounter">
                                                     <tr class="textoCZA_12" bgcolor="#ffffff">
 
                                                         <td>${usuario.nome}</td>
-                                                        <td>${usuario.ramal}</td>
+                                                        <!--<td>{usuario.ramal}</td>-->
                                                         <td>${usuario.email}</td>
+                                                        <td>${usuario.idNivelacesso.nome}</td>
 
                                                         <td>
                                                         <c:if test="${usuario.idNivelacesso.idNivelacesso == 1}">
@@ -159,7 +162,7 @@
 
 
                                                         </td>
-                                                        <td width="100px">&nbsp;<a href="usuarioServlet?idUsuario=${usuario.idUsuario}"    class="textoLnkMenu_12B">Detalhes</a></td>
+                                                        <td width="100px">&nbsp;<a href="usuarioServlet?idUsuario=${usuario.idUsuario}"    class="textoLnkMenu_12B">Editar</a></td>
                                                     </tr>
                                                 </c:forEach>
                                             </table>
@@ -176,6 +179,7 @@
             </tr>
         </table>
         <!-- FIM - Resultado Pesquisa -->
+        </c:if>
 
     </body>
 </html>
