@@ -89,6 +89,18 @@
                             </tr>
                             <tr class="textoCZA_12B" height="25px">
                                 <td></td>
+                                <td>Usuário Responsável:</td>
+                                <td>
+                                    <select style="width: 250px" id="userResp" name="userResp" class="imputBR">
+                                        <option value="0"> -- Selecione -- </option>
+                                        <c:forEach var="listaUsuarios" items="${listaUsuarios}">
+                                            <option <c:if test="${listaUsuarios.idUsuario==chamado.idUsuarioResponsavel.idUsuario}">selected</c:if> value="${listaUsuarios.idUsuario}">${listaUsuarios.nome}</option>
+                                        </c:forEach>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr class="textoCZA_12B" height="25px">
+                                <td></td>
                                 <td>Problema:</td>
                                 <td>
                                     <select style="width: 250px" id="problema" name="problema" class="imputBR">
