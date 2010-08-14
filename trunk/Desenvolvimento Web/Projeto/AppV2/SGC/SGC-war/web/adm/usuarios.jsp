@@ -102,11 +102,13 @@
                                 <td>E-mail:</td>
                                 <td><input type="text" id="email" name="email" value="${usuarioEsc.email}" class="imputBR" size="50" maxlength="100" /></td>
                             </tr>
+                            <!--
                             <tr class="textoCZA_12B" height="25px">
                                 <td width="10px" ></td>
                                 <td>Ramal:</td>
-                                <td><input type="text" id="ramal" name="ramal" value="${usuarioEsc.ramal}" class="imputBR" maxlength="5" /></td>
+                                <td><input type="text" id="ramal" name="ramal" value="{usuarioEsc.ramal}" class="imputBR" maxlength="5" /></td>
                             </tr>
+                            -->
 
                             <tr class="textoCZA_12B" height="25px">
                                 <td width="10px" ></td>
