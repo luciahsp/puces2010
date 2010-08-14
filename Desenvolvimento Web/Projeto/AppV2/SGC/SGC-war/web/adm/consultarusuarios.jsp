@@ -10,15 +10,6 @@
 
         <link href="_styles/StyleMain.css" rel="stylesheet" type="text/css" />
 
-                <script language="javascript">
-            function valida() {
-                if (document.getElementById("nome").value == "") {
-                    alert("Preencha o nome do usuário !");
-                    return false;
-                }
-
-            }
-        </script>
     </head>
     <body>
 
@@ -70,7 +61,7 @@
             <tr>
                 <td>
 
-                    <form action="ListarUsuarios" method="post" onsubmit="return Valida();">
+                    <form action="ListarUsuarios" method="post" onsubmit="">
 
                         <table border="0" cellpadding="0" cellspacing="0">
                             <tr>
@@ -168,7 +159,7 @@
 
 
                                                         </td>
-                                                        <td width="100px">&nbsp;<a href="usuarioServlet?idUsuario=<codigo>" class="textoLnkMenu_12B">Detalhes</a></td>
+                                                        <td width="100px">&nbsp;<a href="usuarioServlet?idUsuario=${usuario.idUsuario}"    class="textoLnkMenu_12B">Detalhes</a></td>
                                                     </tr>
                                                 </c:forEach>
                                             </table>
