@@ -21,9 +21,9 @@ public class ListarUsuarios extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
 
-        List<Usuario> lista = gerenciadorSBC.listarUsuarios();
-        request.setAttribute("lista", lista);
-        request.setAttribute("Contador",lista.size());
+        //List<Usuario> lista = gerenciadorSBC.listarUsuarios();
+        //request.setAttribute("lista", lista);
+        //request.setAttribute("Contador",lista.size());
         request.getRequestDispatcher("adm/consultarusuarios.jsp").forward(request, response);
     }
 

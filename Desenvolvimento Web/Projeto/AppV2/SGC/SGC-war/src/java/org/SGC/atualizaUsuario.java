@@ -31,7 +31,7 @@ public class atualizaUsuario extends HttpServlet {
        user.setIdLocal(localDep);
        user.setIdNivelacesso(nivel);
        user.setNome(request.getParameter("nome"));
-       user.setRamal(request.getParameter("ramal"));
+       //user.setRamal(request.getParameter("ramal"));
        user.setSenha(request.getParameter("senha"));
 
        try {
