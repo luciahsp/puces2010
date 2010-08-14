@@ -110,6 +110,7 @@ create table Chamado
 (
 ID_Chamado integer NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1),
 ID_Usuario integer CONSTRAINT FK_IDUsuarioChamado References Usuario on Delete Cascade on Update Restrict,
+ID_UsuarioResponsavel integer CONSTRAINT FK_IDUsuarioResponsavelChamado References Usuario on Delete Cascade on Update Restrict,
 ID_AreaResponsavel integer CONSTRAINT FK_IDAreaResponsavelChamado References AreaResponsavel on Delete Cascade on Update Restrict,
 ID_Problema integer CONSTRAINT FK_IDProblemaChamado References Problema on Delete Cascade on Update Restrict,
 ID_Unidade integer CONSTRAINT FK_IDUnidadeChamado References Unidade on Delete Cascade on Update Restrict,
@@ -121,7 +122,7 @@ HoraAbertura Time,
 DataFechamento Date,
 HoraFechamento Time,
 primary key(ID_Chamado)
-) 
+) ;
 
 
 create table ChamadoAcao
@@ -135,7 +136,7 @@ Descricao varchar(1000),
 Data Date,
 Hora Time,
 primary key(ID_ChamadoAcao)
-) 
+) ;
 
 
 create table TipoAcesso
