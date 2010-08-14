@@ -26,6 +26,11 @@ public class atualizaChamadoAcao extends HttpServlet {
           chamado =  gerenciadorSBC.recuperaChamado(Integer.parseInt(request.getParameter("codigo")));
         }
 
+        Usuario usuarioResp = null;
+        if (Integer.parseInt(request.getParameter("userResp")) != 0){
+            usuarioResp = gerenciadorSBC.recuperaUsuario(Integer.parseInt(request.getParameter("userResp")));
+        }
+
         Usuario usuario = gerenciadorSBC.recuperaUsuario(Integer.parseInt(request.getParameter("codigoUser")));
 
         //Carrega Status
@@ -43,6 +48,10 @@ public class atualizaChamadoAcao extends HttpServlet {
 
         //Alterando classe CHAMADO
         chamado.setIdStatusatendimentoatual(statusNovo);
+
+        if (Integer.parseInt(request.getParameter("userResp")) != 0){
+            chamado.setIdUsuarioResponsavel(usuarioResp);
+        }
 
         if (statusNovo.getFecharatendimento() == 1)
         {
