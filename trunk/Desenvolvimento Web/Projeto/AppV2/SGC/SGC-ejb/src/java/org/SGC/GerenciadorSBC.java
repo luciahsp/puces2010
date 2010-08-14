@@ -74,6 +74,38 @@ public class GerenciadorSBC implements GerenciadorSBCLocal {
         Query q = em.createQuery("SELECT c FROM Chamado c");
         return q.getResultList();
     }
+    public List<Chamado> listarChamadosConsulta(Integer idStatus, String descricao) {
+
+        String query = "";
+
+        if (idStatus != 0)
+        {
+            query = "c.idStatusatendimentoatual.idStatusatendimento = " + idStatus.toString() + " ";
+        }
+
+        if (!descricao.equals(""))
+        {
+            if (!query.equals(""))
+            {
+                query = query + " AND ";
+            }
+
+            query = query + "c.descricao LIKE '%" + descricao + "%'";
+        }
+
+        Query q = null;
+
+        if (query.equals(""))
+        {
+            q = em.createQuery("SELECT c FROM Chamado c");
+        }
+        else
+        {
+            q = em.createQuery("SELECT c FROM Chamado c WHERE " + query);
+        }
+
+        return q.getResultList();
+    }
 
     public List<LocalDepartamento> listarLocais() {
          Query q = em.createQuery("SELECT l FROM LocalDepartamento l");

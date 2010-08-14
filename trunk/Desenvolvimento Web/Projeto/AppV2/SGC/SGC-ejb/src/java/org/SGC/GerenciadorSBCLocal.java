@@ -78,4 +78,6 @@ public interface GerenciadorSBCLocal {
     public List<Historicoacesso> recuperaHistoricoAcessoUsuario(Usuario user);
     public void insereHistoricoAcesso(Historicoacesso historico);
 
+    public java.util.List<org.SGC.Chamado> listarChamadosConsulta(java.lang.Integer idStatus, java.lang.String descricao);
+
 }
