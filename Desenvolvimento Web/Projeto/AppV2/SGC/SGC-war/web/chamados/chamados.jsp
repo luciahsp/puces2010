@@ -84,6 +84,7 @@
                                             <td width="100px" height="20px">Nome</td>
                                             <td width="100px">Departamento</td>
                                             <td width="100px">Área Responsável</td>
+                                            <td width="100px">Usuário Responsável pelo Chamado</td>
                                             <td width="100px">Problema</td>
                                             <td width="100px">Descrição</td>
                                             <td width="100px">Data Abertura</td>
@@ -96,6 +97,7 @@
                                                 <td>${lista.idUsuario.nome}</td>
                                                 <td>${lista.idLocal.nome}</td>
                                                 <td>${lista.idArearesponsavel.nome}</td>
+                                                <td>${lista.idUsuarioResponsavel.nome}</td>
                                                 <td>${lista.idProblema.descricao}</td>
                                                 <td>${lista.descricao}</td>
                                                 <td><f:formatDate pattern="dd/MM/yyyy" value="${lista.dataabertura}" /></td>
@@ -159,6 +161,7 @@
                                             <td width="100px" height="20px">Nome</td>
                                             <td width="100px">Departamento</td>
                                             <td width="100px">Área Responsável</td>
+                                            <td width="100px">Usuário Responsável pelo Chamado</td>
                                             <td width="100px">Problema</td>
                                             <td width="100px">Descrição</td>
                                             <td width="100px">Data Abertura</td>
@@ -171,6 +174,7 @@
                                                 <td>${lista.idUsuario.nome}</td>
                                                 <td>${lista.idLocal.nome}</td>
                                                 <td>${lista.idArearesponsavel.nome}</td>
+                                                <td>${lista.idUsuarioResponsavel.nome}</td>
                                                 <td>${lista.idProblema.descricao}</td>
                                                 <td>${lista.descricao}</td>
                                                 <td><f:formatDate pattern="dd/MM/yyyy" value="${lista.dataabertura}" /></td>
