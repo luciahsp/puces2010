@@ -27,5 +27,16 @@ public class ListarUsuarios extends HttpServlet {
         request.getRequestDispatcher("adm/consultarusuarios.jsp").forward(request, response);
     }
 
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+    throws ServletException, IOException {
+
+        String nome = "";
+
+        nome = request.getParameter("nome");
+
+        response.sendRedirect("filtrarUsuarios?nome=" + nome.toString());
+    }
+
 
 }
