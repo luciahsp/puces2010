@@ -25,7 +25,9 @@ public interface GerenciadorSBCLocal {
     public Chamado recuperaChamadoFechados();
     public Chamado recuperaChamado(int id);
     public void insereChamado(Chamado chamado);
-
+    public List<Chamado> recuperaChamadoAbertosOperador(Usuario user);
+    public List<Chamado> recuperaChamadoAbertosOperadorPendente(Usuario user);
+    
     //Ação do Chamado
     public List<Chamadoacao> listarChamadoAcoes(Chamado chamado);
 

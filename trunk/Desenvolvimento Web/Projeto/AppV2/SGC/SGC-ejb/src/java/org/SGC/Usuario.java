@@ -61,7 +61,7 @@ public class Usuario implements Serializable {
     private List<Chamadoacao> chamadoacaoList;
     @OneToMany(mappedBy = "idUsuario")
     private List<Chamado> chamadoList;
-    @OneToMany(mappedBy = "idUsuarioResponsavel")
+    @OneToMany(mappedBy = "idUsuario")
     private List<Chamado> chamadoListResp;
 
 

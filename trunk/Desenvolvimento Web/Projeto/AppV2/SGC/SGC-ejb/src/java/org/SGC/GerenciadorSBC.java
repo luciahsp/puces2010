@@ -130,6 +130,15 @@ public class GerenciadorSBC implements GerenciadorSBCLocal {
          return q.getResultList();
     }   
 
+    public List<Chamado> recuperaChamadoAbertosOperador(Usuario user) {
+         Query q = em.createQuery("SELECT c FROM Chamado c WHERE c.datafechamento is null AND c.idUsuarioResponsavel.idUsuario > 0 AND c.idUsuario.idUsuario = " + user.getIdUsuario());
+         return q.getResultList();
+    }
+
+    public List<Chamado> recuperaChamadoAbertosOperadorPendente(Usuario user) {
+         Query q = em.createQuery("SELECT c FROM Chamado c WHERE c.datafechamento is null AND c.idUsuarioResponsavel is null AND c.idUsuario.idUsuario = " + user.getIdUsuario());
+         return q.getResultList();
+    }
 
     public Chamado recuperaChamadoEmAtendimento() {
         throw new UnsupportedOperationException("Not supported yet.");
