@@ -70,7 +70,7 @@
             <tr>
                 <td>
 
-                    <form action="ListaUsuarios" method="post" onsubmit="return Valida();">
+                    <form action="filtrarUsuarios" method="post" onsubmit="return Valida();">
 
                         <table border="0" cellpadding="0" cellspacing="0">
                             <tr>
